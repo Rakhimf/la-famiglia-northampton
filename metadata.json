@@ -1,0 +1,6 @@
+{
+  "name": "La Famiglia Restaurant",
+  "description": "Modern luxury Italian restaurant website rebuilt for La Famiglia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
