@@ -54,7 +54,7 @@ export function TestimonialSlider() {
               <p className="font-serif italic text-[32px] md:text-[40px] leading-[1.3] text-cream mb-12 max-w-[1000px]">
                 {testimonials[currentIndex].text}
               </p>
-              <p className="font-sans text-sm uppercase tracking-[0.15em] text-muted">
+              <p className="font-sans text-base uppercase tracking-[0.15em] text-muted">
                 {testimonials[currentIndex].author}
               </p>
             </motion.div>

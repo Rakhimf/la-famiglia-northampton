@@ -42,26 +42,23 @@ export function Navbar() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between">
 
-            {/* Logo / Restaurant Name */}
-            <Link to="/" className="flex items-center gap-3">
+            {/* Logo */}
+            <Link to="/">
               <img
                 src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/WhatsApp%20Image%202026-07-14%20at%2020.45.00%20(1).jpeg"
                 alt="La Famiglia Logo"
-                className="h-10 md:h-12 w-auto"
+                className="h-12 md:h-14 w-auto"
               />
-              <span className="font-serif text-2xl md:text-3xl text-cream tracking-wider">
-                La Famiglia
-              </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden xl:flex items-center gap-8">
+            <nav className="hidden xl:flex items-center gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   className={cn(
-                    'text-base font-medium transition-colors duration-200 hover:text-gold',
+                    'text-sm font-medium transition-colors duration-200 hover:text-gold whitespace-nowrap',
                     location.pathname === link.path
                       ? 'text-gold'
                       : 'text-cream'
@@ -73,14 +70,7 @@ export function Navbar() {
             </nav>
 
             {/* Desktop CTA */}
-            <div className="hidden xl:flex items-center gap-4">
-              <a
-                href="tel:01604385060"
-                className="flex items-center gap-2 text-cream hover:text-gold transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span className="text-sm font-medium">01604 385060</span>
-              </a>
+            <div className="hidden xl:flex items-center">
               <Link
                 to="/book-now"
                 className="bg-gold text-white px-6 py-3 text-sm font-semibold uppercase tracking-wider hover:bg-gold/90 transition-colors duration-200 rounded"
@@ -173,7 +163,7 @@ export function Navbar() {
 
                 <div className="mt-4 flex items-center justify-center gap-2 text-cream">
                   <Phone className="w-4 h-4" />
-                  <a href="tel:01604385060" className="text-sm hover:text-gold transition-colors">
+                  <a href="tel:01604385060" className="text-base hover:text-gold transition-colors">
                     01604 385060
                   </a>
                 </div>

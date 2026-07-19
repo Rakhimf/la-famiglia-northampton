@@ -17,7 +17,7 @@ export function Footer() {
               />
               <h2 className="font-serif text-3xl text-cream tracking-widest uppercase">La Famiglia</h2>
             </div>
-            <p className="text-muted text-sm leading-relaxed mb-6 font-light">
+            <p className="text-muted text-base md:text-lg leading-relaxed mb-6 font-light">
               An authentic Italian dining experience nestled in the historic Taylor Memorial Hall. 
               Fresh ingredients, warm ambiance, and family traditions.
             </p>
@@ -37,7 +37,7 @@ export function Footer() {
                 { name: 'Book Now', path: '/book-now' },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link to={link.path} className="text-muted hover:text-cream text-sm transition-colors uppercase tracking-[0.12em]">
+                  <Link to={link.path} className="text-muted hover:text-cream text-base transition-colors uppercase tracking-[0.12em]">
                     {link.name}
                   </Link>
                 </li>
@@ -48,7 +48,7 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="font-serif text-xl text-cream mb-6 tracking-wide">Contact Us</h3>
-            <ul className="space-y-4 text-muted text-sm font-light">
+            <ul className="space-y-4 text-muted text-base font-light">
               <li>17 Castilian Street, NN1 1JS,<br />Northampton</li>
               <li>
                 <a href="tel:01604385060" className="hover:text-cream transition-colors">01604 385060</a>
@@ -63,7 +63,7 @@ export function Footer() {
           {/* Opening Hours */}
           <div>
             <h3 className="font-serif text-xl text-cream mb-6 tracking-wide">Opening Hours</h3>
-            <ul className="space-y-3 text-muted text-sm font-light">
+            <ul className="space-y-3 text-muted text-base font-light">
               <li className="flex justify-between">
                 <span>Mon - Tue</span>
                 <span>Closed</span>

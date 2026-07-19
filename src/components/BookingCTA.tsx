@@ -13,13 +13,13 @@ export function BookingCTA() {
         <div className="flex flex-col sm:flex-row items-center gap-6">
           <Link 
             to="/book-now"
-            className="inline-block border border-gold text-cream hover:bg-gold hover:text-bg px-10 py-4 text-xs md:text-sm uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] whitespace-nowrap"
+            className="inline-block border border-gold text-cream hover:bg-gold hover:text-bg px-10 py-4 text-xs md:text-base uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] whitespace-nowrap"
           >
             Reserve a Table
           </Link>
           <Link 
             to="/contact"
-            className="inline-block text-cream hover:text-gold px-10 py-4 text-xs md:text-sm uppercase tracking-[0.15em] transition-colors duration-300 whitespace-nowrap"
+            className="inline-block text-cream hover:text-gold px-10 py-4 text-xs md:text-base uppercase tracking-[0.15em] transition-colors duration-300 whitespace-nowrap"
           >
             Contact Us
           </Link>

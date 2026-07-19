@@ -37,7 +37,7 @@ export function EditorialSection({ eyebrow, heading, body, cta, align = 'left' }
             {heading}
           </h2>
           
-          <div className="font-sans font-light text-base md:text-lg text-muted leading-[1.8] mb-14 space-y-6">
+          <div className="font-sans font-light text-lg md:text-xl text-muted leading-[1.8] mb-14 space-y-6">
             {typeof body === 'string' ? <p>{body}</p> : body}
           </div>
 

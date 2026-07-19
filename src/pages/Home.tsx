@@ -64,7 +64,7 @@ export default function Home() {
                   <h3 className="font-serif text-[22px] text-cream">{dish.name}</h3>
                   <span className="font-sans text-base text-gold ml-4">{dish.price}</span>
                 </div>
-                <p className="font-sans text-sm text-muted">{dish.desc}</p>
+                <p className="font-sans text-base text-muted">{dish.desc}</p>
               </div>
             ))}
           </div>
@@ -119,7 +119,7 @@ export default function Home() {
             <div key={item.num} className="flex flex-col">
               <span className="font-serif text-3xl text-gold mb-6">{item.num}</span>
               <h3 className="font-serif text-[24px] text-cream mb-4">{item.title}</h3>
-              <p className="font-sans text-sm text-muted leading-[1.8]">{item.desc}</p>
+              <p className="font-sans text-base text-muted leading-[1.8]">{item.desc}</p>
             </div>
           ))}
         </div>

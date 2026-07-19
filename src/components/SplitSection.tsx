@@ -86,7 +86,7 @@ export function SplitSection({ imageSrc, imageAlt, eyebrow, heading, body, cta, 
           </motion.h2>
 
           <motion.div
-            className="font-sans font-light text-base text-muted leading-[1.8] mb-14 space-y-6"
+            className="font-sans font-light text-lg md:text-xl text-muted leading-[1.8] mb-14 space-y-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
