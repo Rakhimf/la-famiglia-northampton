@@ -5,6 +5,7 @@ import { EditorialSection } from '@/components/EditorialSection';
 import { SplitSection } from '@/components/SplitSection';
 import { TestimonialSlider } from '@/components/TestimonialSlider';
 import { BookingCTA } from '@/components/BookingCTA';
+import { VideoPlayer } from '@/components/VideoPlayer';
 
 export default function Home() {
   return (
@@ -25,6 +26,10 @@ export default function Home() {
           alt="Food photography"
           heightClass="h-[75vh]"
         />
+      </div>
+
+      <div className="w-full">
+        <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/lafmaigia%20website%20x2.mov" />
       </div>
 
       <EditorialSection
@@ -54,7 +59,7 @@ export default function Home() {
               { name: 'Rib-eye Steak', price: '£31.00', desc: '12oz charcoal-grilled rib-eye served with rosemary potatoes, grilled vegetables and a rich peppercorn sauce.' },
               { name: 'Grilled Butterfly Sea Bass', price: '£29.00', desc: 'Whole butterfly sea bass grilled with roasted garlic, cherry tomato confit, extra virgin olive oil and Mediterranean chopped salsa.' }
             ].map((dish, i) => (
-              <div key={dish.name} className={i !== 0 ? "pt-6 border-t border-white/5" : ""}>
+              <div key={dish.name} className={i !== 0 ? "pt-6 border-t border-dark/10" : ""}>
                 <div className="flex justify-between items-baseline mb-2">
                   <h3 className="font-serif text-[22px] text-cream">{dish.name}</h3>
                   <span className="font-sans text-base text-gold ml-4">{dish.price}</span>
@@ -92,6 +97,10 @@ export default function Home() {
           alt="Event atmosphere"
           heightClass="h-[70vh]"
         />
+      </div>
+
+      <div className="w-full">
+        <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/lafamiglia%20website%20video%202.mov" />
       </div>
 
       <section className="py-24 md:py-40 px-6 lg:px-20 bg-bg">

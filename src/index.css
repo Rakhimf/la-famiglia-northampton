@@ -5,11 +5,12 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
 
-  --color-bg: #0D0C0A;
-  --color-bg-alt: #141210;
-  --color-cream: #F0EDE6;
-  --color-gold: #C4A55A;
-  --color-muted: #8A8178;
+  --color-bg: #FAF9F7;
+  --color-bg-alt: #F0EDE6;
+  --color-cream: #0D0C0A;
+  --color-gold: #9A7B3C;
+  --color-muted: #6B635A;
+  --color-dark: #0D0C0A;
 }
 
 @layer base {

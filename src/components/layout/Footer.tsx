@@ -9,7 +9,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
           {/* Brand */}
           <div className="col-span-1 lg:col-span-1">
-            <h2 className="font-serif text-3xl text-cream mb-4 tracking-widest uppercase">La Famiglia</h2>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/WhatsApp%20Image%202026-07-14%20at%2020.45.00%20(1).jpeg"
+                alt="La Famiglia Logo"
+                className="h-14 w-auto"
+              />
+              <h2 className="font-serif text-3xl text-cream tracking-widest uppercase">La Famiglia</h2>
+            </div>
             <p className="text-muted text-sm leading-relaxed mb-6 font-light">
               An authentic Italian dining experience nestled in the historic Taylor Memorial Hall. 
               Fresh ingredients, warm ambiance, and family traditions.

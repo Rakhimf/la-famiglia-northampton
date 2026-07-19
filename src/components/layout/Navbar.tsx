@@ -36,14 +36,19 @@ export function Navbar() {
       <header
         className={cn(
           'fixed top-0 w-full z-40 transition-all duration-300',
-          scrolled ? 'bg-[#0D0C0A] py-3 shadow-lg' : 'bg-[#0D0C0A]/80 backdrop-blur-md py-4'
+          scrolled ? 'bg-white py-3 shadow-lg' : 'bg-white/90 backdrop-blur-md py-4'
         )}
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between">
 
             {/* Logo / Restaurant Name */}
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center gap-3">
+              <img
+                src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/WhatsApp%20Image%202026-07-14%20at%2020.45.00%20(1).jpeg"
+                alt="La Famiglia Logo"
+                className="h-10 md:h-12 w-auto"
+              />
               <span className="font-serif text-2xl md:text-3xl text-cream tracking-wider">
                 La Famiglia
               </span>
@@ -78,7 +83,7 @@ export function Navbar() {
               </a>
               <Link
                 to="/book-now"
-                className="bg-white text-bg px-6 py-3 text-sm font-semibold uppercase tracking-wider hover:bg-gold transition-colors duration-200 rounded"
+                className="bg-gold text-white px-6 py-3 text-sm font-semibold uppercase tracking-wider hover:bg-gold/90 transition-colors duration-200 rounded"
               >
                 Reserve Now
               </Link>
@@ -88,7 +93,7 @@ export function Navbar() {
             <div className="xl:hidden flex items-center gap-3">
               <Link
                 to="/book-now"
-                className="bg-white text-bg px-4 py-2 text-sm font-semibold uppercase tracking-wider rounded"
+                className="bg-gold text-white px-4 py-2 text-sm font-semibold uppercase tracking-wider rounded"
               >
                 Reserve
               </Link>
@@ -122,10 +127,10 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3, ease: 'easeOut' }}
-              className="fixed top-0 right-0 h-full w-full max-w-[320px] z-50 bg-[#0D0C0A] overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-full max-w-[320px] z-50 bg-white overflow-y-auto"
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-white/10">
+              <div className="flex items-center justify-between p-6 border-b border-dark/10">
                 <span className="font-serif text-xl text-cream">Menu</span>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -147,7 +152,7 @@ export function Navbar() {
                           'block py-3 px-4 text-lg font-medium rounded-lg transition-colors',
                           location.pathname === link.path
                             ? 'bg-gold/10 text-gold'
-                            : 'text-cream hover:bg-white/5 hover:text-gold'
+                            : 'text-cream hover:bg-dark/5 hover:text-gold'
                         )}
                       >
                         {link.name}
@@ -158,10 +163,10 @@ export function Navbar() {
               </nav>
 
               {/* Footer */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10 bg-[#0D0C0A]">
+              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-dark/10 bg-white">
                 <Link
                   to="/book-now"
-                  className="block w-full bg-gold text-bg py-4 text-center text-base font-semibold uppercase tracking-wider hover:bg-cream transition-colors rounded"
+                  className="block w-full bg-gold text-white py-4 text-center text-base font-semibold uppercase tracking-wider hover:bg-gold/90 transition-colors rounded"
                 >
                   Reserve a Table
                 </Link>
