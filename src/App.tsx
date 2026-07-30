@@ -8,6 +8,7 @@ import ChristmasParty from '@/pages/ChristmasParty';
 import Gallery from '@/pages/Gallery';
 import Contact from '@/pages/Contact';
 import BookNow from '@/pages/BookNow';
+import QRCode from '@/pages/QRCode';
 
 export default function App() {
   return (
@@ -23,7 +24,10 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="book-now" element={<BookNow />} />
         </Route>
+        {/* QR page is outside Layout — no Navbar/Footer, pure print view */}
+        <Route path="/qr" element={<QRCode />} />
       </Routes>
     </Router>
   );
 }
+
