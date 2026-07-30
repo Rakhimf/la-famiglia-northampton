@@ -10,8 +10,6 @@ interface DishItem {
   price: string;
 }
 
-type WithKey<T> = T & { key?: React.Key };
-
 interface MenuCategoryData {
   id: string;
   name: string;
@@ -145,169 +143,45 @@ const menuData: MenuCategoryData[] = [
   },
 ];
 
-// ─── ALLERGEN NOTE ────────────────────────────────────────────────────────────
+// ─── FALLBACK PHOTO ──────────────────────────────────────────────────────────
+const FALLBACK = `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png`;
 
-function AllergenNote() {
-  return (
-    <div
-      style={{
-        margin: '0 16px',
-        padding: '20px',
-        backgroundColor: '#141210',
-        borderRadius: '10px',
-        border: '1px solid rgba(255,255,255,0.05)',
-      }}
-    >
-      <p
-        style={{
-          fontFamily: 'Inter, system-ui, sans-serif',
-          fontSize: '12px',
-          color: '#6B625A',
-          lineHeight: 1.7,
-          fontWeight: 300,
-          textAlign: 'center',
-          margin: 0,
-        }}
-      >
-        <strong
-          style={{
-            color: '#9A7B3C',
-            textTransform: 'uppercase' as const,
-            letterSpacing: '0.12em',
-            fontWeight: 500,
-            fontSize: '10px',
-            display: 'block',
-            marginBottom: '8px',
-          }}
-        >
-          Allergen Information
-        </strong>
-        Our menu contains allergens. If you suffer from a food allergy or intolerance, please let a member of the restaurant team know upon placing your order, however we cannot fully guarantee that the food in these premises will be free from allergens.
-      </p>
-    </div>
-  );
-}
+// ─── VIEW 1 — CATEGORY LANDING ───────────────────────────────────────────────
 
-// ─── BADGE COMPONENT ─────────────────────────────────────────────────────────
-
-function Badge({ label }: { label: string; key?: React.Key }) {
-  const isVegan = label === 'Vegan';
-  return (
-    <span
-      style={{
-        display: 'inline-block',
-        fontSize: '10px',
-        fontFamily: 'Inter, system-ui, sans-serif',
-        fontWeight: 500,
-        letterSpacing: '0.05em',
-        padding: '2px 7px',
-        borderRadius: '99px',
-        backgroundColor: isVegan ? 'rgba(52,168,83,0.18)' : 'rgba(52,168,83,0.14)',
-        color: isVegan ? '#4ade80' : '#6ee7a0',
-        border: '1px solid rgba(74,222,128,0.25)',
-        marginLeft: '6px',
-        verticalAlign: 'middle',
-        flexShrink: 0,
-      }}
-    >
-      {isVegan ? 'Vegan' : 'V'}
-    </span>
-  );
-}
-
-// ─── DISH CARD ────────────────────────────────────────────────────────────────
-
-function DishCard({ item }: { item: DishItem; key?: React.Key }) {
-  return (
-    <div
-      style={{
-        backgroundColor: '#141210',
-        borderRadius: '12px',
-        padding: '16px 18px',
-      }}
-    >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px' }}>
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '4px' }}>
-            <span
-              style={{
-                fontFamily: '"Cormorant Garamond", Georgia, serif',
-                fontSize: '18px',
-                fontWeight: 400,
-                color: '#F5F0E8',
-                lineHeight: 1.3,
-              }}
-            >
-              {item.name}
-            </span>
-            {item.badges.map((b) => (
-              <Badge key={b} label={b} />
-            ))}
-          </div>
-          {item.description && (
-            <p
-              style={{
-                fontFamily: 'Inter, system-ui, sans-serif',
-                fontSize: '13px',
-                color: '#8A8178',
-                marginTop: '7px',
-                lineHeight: 1.65,
-                fontWeight: 300,
-                margin: '7px 0 0',
-              }}
-            >
-              {item.description}
-            </p>
-          )}
-        </div>
-        <span
-          style={{
-            fontFamily: 'Inter, system-ui, sans-serif',
-            fontSize: '15px',
-            color: '#C4A55A',
-            fontWeight: 500,
-            whiteSpace: 'nowrap',
-            paddingTop: '2px',
-            flexShrink: 0,
-          }}
-        >
-          {item.price}
-        </span>
-      </div>
-    </div>
-  );
-}
-
-// ─── CATEGORY TILE ────────────────────────────────────────────────────────────
-
-function CategoryTile({ category, onClick }: { category: MenuCategoryData; onClick: () => void; key?: React.Key }) {
-  const [hovered, setHovered] = useState(false);
+function CategoryTile({
+  cat,
+  onClick,
+}: {
+  cat: MenuCategoryData;
+  onClick: () => void;
+  key?: React.Key;
+}) {
   const [imgError, setImgError] = useState(false);
-
-  const fallbackPhoto = `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png`;
+  const [hover, setHover] = useState(false);
 
   return (
     <button
-      id={`category-tile-${category.id}`}
+      id={`tile-${cat.id}`}
       onClick={onClick}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       style={{
         position: 'relative',
         width: '100%',
-        height: 'clamp(200px, 22vw, 260px)',
-        overflow: 'hidden',
-        cursor: 'pointer',
-        border: 'none',
-        outline: 'none',
+        height: '220px',
         display: 'block',
+        overflow: 'hidden',
+        border: 'none',
         padding: 0,
+        cursor: 'pointer',
         backgroundColor: '#1a1814',
+        flexShrink: 0,
       }}
     >
+      {/* Photo */}
       <img
-        src={imgError ? fallbackPhoto : category.photo}
-        alt={category.name}
+        src={imgError ? FALLBACK : cat.photo}
+        alt={cat.name}
         onError={() => setImgError(true)}
         style={{
           position: 'absolute',
@@ -316,33 +190,17 @@ function CategoryTile({ category, onClick }: { category: MenuCategoryData; onCli
           height: '100%',
           objectFit: 'cover',
           objectPosition: 'center',
-          transition: 'transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-          transform: hovered ? 'scale(1.06)' : 'scale(1)',
+          transition: 'transform 0.5s ease',
+          transform: hover ? 'scale(1.04)' : 'scale(1)',
         }}
       />
-      {/* Gradient overlay */}
+      {/* Dark overlay */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          background: hovered
-            ? 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.65) 100%)'
-            : 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 100%)',
-          transition: 'background 0.4s ease',
-        }}
-      />
-      {/* Gold accent line */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: '2px',
-          backgroundColor: '#C4A55A',
-          transform: hovered ? 'scaleX(1)' : 'scaleX(0)',
-          transformOrigin: 'left',
-          transition: 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+          backgroundColor: hover ? 'rgba(0,0,0,0.42)' : 'rgba(0,0,0,0.50)',
+          transition: 'background-color 0.3s ease',
         }}
       />
       {/* Text */}
@@ -354,115 +212,246 @@ function CategoryTile({ category, onClick }: { category: MenuCategoryData; onCli
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '20px',
+          gap: '10px',
         }}
       >
-        <h2
-          style={{
-            fontFamily: '"Cormorant Garamond", Georgia, serif',
-            fontSize: 'clamp(24px, 3vw, 36px)',
-            fontWeight: 400,
-            color: '#FFFFFF',
-            textTransform: 'uppercase',
-            letterSpacing: '0.15em',
-            textAlign: 'center',
-            lineHeight: 1.1,
-            margin: 0,
-            textShadow: '0 2px 20px rgba(0,0,0,0.6)',
-            transition: 'transform 0.35s ease',
-            transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
-          }}
-        >
-          {category.name}
-        </h2>
         <span
           style={{
-            marginTop: '12px',
-            fontFamily: 'Inter, system-ui, sans-serif',
-            fontSize: '11px',
+            fontFamily: '"Cormorant Garamond", Georgia, serif',
+            fontSize: '30px',
             fontWeight: 400,
-            color: 'rgba(255,255,255,0.9)',
-            backgroundColor: 'rgba(255,255,255,0.15)',
-            backdropFilter: 'blur(8px)',
-            border: '1px solid rgba(255,255,255,0.2)',
-            borderRadius: '99px',
-            padding: '4px 12px',
-            letterSpacing: '0.06em',
-            transition: 'opacity 0.3s ease, transform 0.35s ease',
-            opacity: hovered ? 1 : 0.7,
-            transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
+            color: '#ffffff',
+            textTransform: 'uppercase',
+            letterSpacing: '0.15em',
+            lineHeight: 1,
+            textShadow: '0 1px 12px rgba(0,0,0,0.5)',
           }}
         >
-          {category.count} {category.count === 1 ? 'dish' : 'dishes'}
+          {cat.name}
+        </span>
+        <span
+          style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontSize: '11px',
+            color: 'rgba(255,255,255,0.88)',
+            backgroundColor: 'rgba(255,255,255,0.18)',
+            border: '1px solid rgba(255,255,255,0.25)',
+            borderRadius: '99px',
+            padding: '3px 11px',
+            letterSpacing: '0.04em',
+            backdropFilter: 'blur(4px)',
+          }}
+        >
+          {cat.count} {cat.count === 1 ? 'dish' : 'dishes'}
         </span>
       </div>
     </button>
   );
 }
 
-// ─── DETAIL VIEW ─────────────────────────────────────────────────────────────
+function LandingView({ onSelect }: { onSelect: (id: string) => void }) {
+  return (
+    <div style={{ backgroundColor: '#0D0C0A', minHeight: '100vh' }}>
+      {/* Tiles stacked with 3px gap */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
+        {menuData.map((cat) => (
+          <CategoryTile key={cat.id} cat={cat} onClick={() => onSelect(cat.id)} />
+        ))}
+      </div>
 
-function DetailView({ initialCategoryId, onBack }: { initialCategoryId: string; onBack: () => void }) {
-  const [activeSectionId, setActiveSectionId] = useState(initialCategoryId);
+      {/* Allergen note */}
+      <div style={{ padding: '40px 20px 48px' }}>
+        <p
+          style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontSize: '11.5px',
+            color: '#5A5450',
+            lineHeight: 1.75,
+            textAlign: 'center',
+            maxWidth: '560px',
+            margin: '0 auto',
+          }}
+        >
+          <span
+            style={{
+              display: 'block',
+              fontWeight: 500,
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              fontSize: '10px',
+              color: '#8A7B5C',
+              marginBottom: '8px',
+            }}
+          >
+            Allergen Information
+          </span>
+          Our menu contains allergens. If you suffer from a food allergy or intolerance, please let
+          a member of the restaurant team know upon placing your order, however we cannot fully
+          guarantee that the food in these premises will be free from allergens.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+// ─── VIEW 2 — DISH LIST ──────────────────────────────────────────────────────
+
+function Badge({ label }: { label: string; key?: React.Key }) {
+  return (
+    <span
+      style={{
+        display: 'inline-block',
+        fontSize: '10px',
+        fontFamily: 'Inter, system-ui, sans-serif',
+        fontWeight: 500,
+        padding: '1px 6px',
+        borderRadius: '99px',
+        backgroundColor: 'rgba(52,168,83,0.15)',
+        color: '#6ee7a0',
+        border: '1px solid rgba(74,222,128,0.22)',
+        marginLeft: '6px',
+        verticalAlign: 'middle',
+        letterSpacing: '0.03em',
+      }}
+    >
+      {label === 'Vegan' ? 'Vegan' : 'V'}
+    </span>
+  );
+}
+
+function DishRow({ item, last }: { item: DishItem; last: boolean; key?: React.Key }) {
+  return (
+    <div
+      style={{
+        paddingTop: '14px',
+        paddingBottom: '14px',
+        borderBottom: last ? 'none' : '1px solid rgba(255,255,255,0.07)',
+      }}
+    >
+      {/* Name + price row */}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          gap: '12px',
+        }}
+      >
+        <span
+          style={{
+            fontFamily: '"Cormorant Garamond", Georgia, serif',
+            fontSize: '17px',
+            fontWeight: 400,
+            color: '#F0EDE6',
+            lineHeight: 1.35,
+            flex: 1,
+          }}
+        >
+          {item.name}
+          {item.badges.map((b) => (
+            <Badge key={b} label={b} />
+          ))}
+        </span>
+        <span
+          style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontSize: '14px',
+            fontWeight: 500,
+            color: '#C4A55A',
+            whiteSpace: 'nowrap',
+            flexShrink: 0,
+            paddingTop: '2px',
+          }}
+        >
+          {item.price}
+        </span>
+      </div>
+      {/* Description */}
+      {item.description && (
+        <p
+          style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontSize: '12.5px',
+            color: '#6B635A',
+            marginTop: '5px',
+            lineHeight: 1.6,
+            fontWeight: 300,
+          }}
+        >
+          {item.description}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function DetailView({
+  initialId,
+  onBack,
+}: {
+  initialId: string;
+  onBack: () => void;
+}) {
+  const [activeId, setActiveId] = useState(initialId);
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
   const navRef = useRef<HTMLDivElement>(null);
 
-  // Scroll to initial category on mount
+  // Scroll to section on mount
   useEffect(() => {
-    const el = sectionRefs.current[initialCategoryId];
+    const el = sectionRefs.current[initialId];
     if (el) {
-      setTimeout(() => {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
+      setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
     }
-  }, [initialCategoryId]);
+  }, [initialId]);
 
-  // IntersectionObserver for active section tracking
+  // IntersectionObserver — track active section as user scrolls
   useEffect(() => {
-    const observers: IntersectionObserver[] = [];
+    const obs: IntersectionObserver[] = [];
     menuData.forEach((cat) => {
       const el = sectionRefs.current[cat.id];
       if (!el) return;
-      const obs = new IntersectionObserver(
+      const o = new IntersectionObserver(
         (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) setActiveSectionId(cat.id);
-          });
+          entries.forEach((e) => { if (e.isIntersecting) setActiveId(cat.id); });
         },
-        { threshold: 0.2, rootMargin: '-80px 0px -55% 0px' }
+        { threshold: 0.15, rootMargin: '-72px 0px -60% 0px' }
       );
-      obs.observe(el);
-      observers.push(obs);
+      o.observe(el);
+      obs.push(o);
     });
-    return () => observers.forEach((o) => o.disconnect());
+    return () => obs.forEach((o) => o.disconnect());
   }, []);
 
-  // Auto-scroll jump nav to active pill
+  // Keep active pill scrolled into view in nav bar
   useEffect(() => {
-    const navEl = navRef.current;
-    const activeEl = navEl?.querySelector(`[data-nav-id="${activeSectionId}"]`) as HTMLElement | null;
-    if (navEl && activeEl) {
-      const scrollLeft =
-        navEl.scrollLeft + activeEl.getBoundingClientRect().left - navEl.getBoundingClientRect().left - navEl.offsetWidth / 2 + activeEl.offsetWidth / 2;
-      navEl.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+    const nav = navRef.current;
+    const pill = nav?.querySelector(`[data-id="${activeId}"]`) as HTMLElement | null;
+    if (nav && pill) {
+      const offset =
+        nav.scrollLeft + pill.getBoundingClientRect().left - nav.getBoundingClientRect().left
+        - nav.offsetWidth / 2 + pill.offsetWidth / 2;
+      nav.scrollTo({ left: offset, behavior: 'smooth' });
     }
-  }, [activeSectionId]);
+  }, [activeId]);
 
   const jumpTo = (id: string) => {
-    const el = sectionRefs.current[id];
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    sectionRefs.current[id]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+
+  // Sticky header height: ~44px back bar + ~46px nav = ~90px
+  const STICKY_H = 90;
 
   return (
     <div style={{ backgroundColor: '#0D0C0A', minHeight: '100vh' }}>
-      {/* Sticky header + jump nav */}
+
+      {/* ── Sticky top bar ── */}
       <div
         style={{
           position: 'sticky',
-          top: '89px',
+          top: '89px', // below site Navbar
           zIndex: 50,
           backgroundColor: '#0D0C0A',
-          borderBottom: '1px solid rgba(196,165,90,0.15)',
+          borderBottom: '1px solid rgba(255,255,255,0.06)',
         }}
       >
         {/* Back row */}
@@ -470,81 +459,74 @@ function DetailView({ initialCategoryId, onBack }: { initialCategoryId: string; 
           style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
-            position: 'relative',
-            padding: '14px 16px',
+            padding: '0 16px',
+            height: '44px',
+            borderBottom: '1px solid rgba(255,255,255,0.05)',
           }}
         >
           <button
-            id="menu-back-button"
+            id="menu-back-btn"
             onClick={onBack}
             style={{
-              position: 'absolute',
-              left: '16px',
-              top: '50%',
-              transform: 'translateY(-50%)',
               background: 'none',
               border: 'none',
               cursor: 'pointer',
+              color: '#C4A55A',
+              fontSize: '22px',
+              lineHeight: 1,
+              padding: '0 12px 0 0',
               display: 'flex',
               alignItems: 'center',
-              gap: '6px',
-              color: '#C4A55A',
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '13px',
-              padding: '4px 0',
             }}
           >
-            <span style={{ fontSize: '20px', lineHeight: 1 }}>←</span>
+            ←
           </button>
           <span
             style={{
               fontFamily: '"Cormorant Garamond", Georgia, serif',
-              fontSize: '20px',
-              fontWeight: 400,
-              color: '#F5F0E8',
-              letterSpacing: '0.1em',
+              fontSize: '18px',
+              color: '#F0EDE6',
+              letterSpacing: '0.08em',
               textTransform: 'uppercase',
             }}
           >
-            Our Menu
+            Menu
           </span>
         </div>
 
-        {/* Category jump nav */}
+        {/* Category pill nav */}
         <div
           ref={navRef}
           style={{
+            display: 'flex',
+            gap: '6px',
             overflowX: 'auto',
+            padding: '9px 16px',
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
-            display: 'flex',
-            gap: '8px',
-            padding: '10px 16px 12px',
-            borderTop: '1px solid rgba(255,255,255,0.05)',
-          }}
+          } as React.CSSProperties}
         >
           {menuData.map((cat) => {
-            const isActive = cat.id === activeSectionId;
+            const active = cat.id === activeId;
             return (
               <button
                 key={cat.id}
-                data-nav-id={cat.id}
-                id={`menu-nav-${cat.id}`}
+                data-id={cat.id}
+                id={`nav-${cat.id}`}
                 onClick={() => jumpTo(cat.id)}
                 style={{
                   flexShrink: 0,
-                  padding: '7px 14px',
+                  padding: '5px 13px',
                   borderRadius: '99px',
+                  fontSize: '11.5px',
                   fontFamily: 'Inter, system-ui, sans-serif',
-                  fontSize: '12px',
-                  fontWeight: isActive ? 500 : 400,
-                  letterSpacing: '0.05em',
+                  fontWeight: active ? 500 : 400,
+                  letterSpacing: '0.04em',
                   cursor: 'pointer',
-                  transition: 'all 0.22s ease',
-                  backgroundColor: isActive ? '#C4A55A' : 'transparent',
-                  color: isActive ? '#0D0C0A' : '#D4C4A8',
-                  border: isActive ? '1px solid #C4A55A' : '1px solid rgba(196,165,90,0.35)',
+                  border: active ? '1px solid #C4A55A' : '1px solid rgba(196,165,90,0.3)',
+                  backgroundColor: active ? '#C4A55A' : 'transparent',
+                  color: active ? '#0D0C0A' : '#C8BAA0',
+                  transition: 'all 0.18s ease',
                   whiteSpace: 'nowrap',
                 }}
               >
@@ -555,25 +537,30 @@ function DetailView({ initialCategoryId, onBack }: { initialCategoryId: string; 
         </div>
       </div>
 
-      {/* Dish sections */}
-      <div style={{ paddingBottom: '80px' }}>
+      {/* ── Dish sections ── */}
+      <div style={{ paddingBottom: '72px' }}>
         {menuData.map((cat) => (
           <section
             key={cat.id}
-            id={`section-${cat.id}`}
+            id={`sec-${cat.id}`}
             ref={(el) => { sectionRefs.current[cat.id] = el; }}
-            style={{ scrollMarginTop: '170px', paddingBottom: '24px' }}
+            style={{ scrollMarginTop: `${89 + STICKY_H + 16}px` }}
           >
-            {/* Section heading */}
-            <div style={{ padding: '36px 16px 0' }}>
+            {/* Section title */}
+            <div
+              style={{
+                padding: '32px 20px 0',
+                borderTop: '1px solid rgba(196,165,90,0.12)',
+              }}
+            >
               <h2
                 style={{
                   fontFamily: '"Cormorant Garamond", Georgia, serif',
-                  fontSize: 'clamp(24px, 4vw, 30px)',
+                  fontSize: '22px',
                   fontWeight: 400,
                   color: '#C4A55A',
-                  letterSpacing: '0.12em',
                   textTransform: 'uppercase',
+                  letterSpacing: '0.14em',
                   margin: 0,
                 }}
               >
@@ -583,33 +570,36 @@ function DetailView({ initialCategoryId, onBack }: { initialCategoryId: string; 
                 <p
                   style={{
                     fontFamily: 'Inter, system-ui, sans-serif',
-                    fontSize: '12px',
-                    color: '#8A8178',
-                    fontWeight: 300,
-                    marginTop: '6px',
+                    fontSize: '11.5px',
+                    color: '#6B635A',
                     fontStyle: 'italic',
+                    marginTop: '5px',
+                    fontWeight: 300,
                   }}
                 >
                   {cat.note}
                 </p>
               )}
-              <div style={{ height: '1px', backgroundColor: 'rgba(196,165,90,0.2)', marginTop: '14px' }} />
             </div>
 
-            {/* Dish cards */}
-            <div style={{ padding: '12px 16px 0', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              {cat.items.map((item, idx) => (
-                <DishCard key={`${cat.id}-${idx}`} item={item} />
+            {/* Dish rows — no cards, bare text */}
+            <div style={{ padding: '4px 20px 0' }}>
+              {cat.items.map((item, i) => (
+                <DishRow
+                  key={`${cat.id}-${i}`}
+                  item={item}
+                  last={i === cat.items.length - 1}
+                />
               ))}
             </div>
           </section>
         ))}
 
-        {/* Reserve a Table */}
+        {/* Reserve CTA */}
         <div style={{ textAlign: 'center', padding: '48px 20px 28px' }}>
           <Link
             to="/book-now"
-            id="menu-reserve-table-btn"
+            id="menu-reserve-btn"
             style={{
               display: 'inline-block',
               fontFamily: 'Inter, system-ui, sans-serif',
@@ -619,7 +609,7 @@ function DetailView({ initialCategoryId, onBack }: { initialCategoryId: string; 
               textTransform: 'uppercase',
               color: '#0D0C0A',
               backgroundColor: '#C4A55A',
-              padding: '14px 40px',
+              padding: '13px 40px',
               borderRadius: '2px',
               textDecoration: 'none',
             }}
@@ -629,95 +619,47 @@ function DetailView({ initialCategoryId, onBack }: { initialCategoryId: string; 
         </div>
 
         {/* Allergen note */}
-        <AllergenNote />
-        <div style={{ height: '32px' }} />
+        <div style={{ padding: '0 20px 40px' }}>
+          <p
+            style={{
+              fontFamily: 'Inter, system-ui, sans-serif',
+              fontSize: '11.5px',
+              color: '#5A5450',
+              lineHeight: 1.75,
+              textAlign: 'center',
+              maxWidth: '560px',
+              margin: '0 auto',
+            }}
+          >
+            <span
+              style={{
+                display: 'block',
+                fontWeight: 500,
+                textTransform: 'uppercase',
+                letterSpacing: '0.12em',
+                fontSize: '10px',
+                color: '#8A7B5C',
+                marginBottom: '8px',
+              }}
+            >
+              Allergen Information
+            </span>
+            Our menu contains allergens. If you suffer from a food allergy or intolerance, please
+            let a member of the restaurant team know upon placing your order, however we cannot
+            fully guarantee that the food in these premises will be free from allergens.
+          </p>
+        </div>
       </div>
     </div>
   );
 }
 
-// ─── LANDING VIEW ─────────────────────────────────────────────────────────────
-
-function LandingView({ onSelectCategory }: { onSelectCategory: (id: string) => void }) {
-  return (
-    <div style={{ backgroundColor: '#0D0C0A', minHeight: '100vh' }}>
-      {/* Header */}
-      <div
-        style={{
-          padding: 'clamp(36px, 6vw, 64px) 20px 28px',
-          textAlign: 'center',
-          borderBottom: '1px solid rgba(196,165,90,0.1)',
-        }}
-      >
-        <p
-          style={{
-            fontFamily: 'Inter, system-ui, sans-serif',
-            fontSize: '10px',
-            textTransform: 'uppercase',
-            letterSpacing: '0.28em',
-            color: '#C4A55A',
-            marginBottom: '14px',
-            fontWeight: 400,
-          }}
-        >
-          La Famiglia
-        </p>
-        <h1
-          style={{
-            fontFamily: '"Cormorant Garamond", Georgia, serif',
-            fontSize: 'clamp(34px, 6vw, 54px)',
-            fontWeight: 300,
-            color: '#F5F0E8',
-            textTransform: 'uppercase',
-            letterSpacing: '0.2em',
-            margin: 0,
-            lineHeight: 1.05,
-          }}
-        >
-          The Menu
-        </h1>
-        <p
-          style={{
-            fontFamily: 'Inter, system-ui, sans-serif',
-            fontSize: '13px',
-            color: '#6B625A',
-            marginTop: '16px',
-            fontWeight: 300,
-            letterSpacing: '0.04em',
-          }}
-        >
-          Select a section to explore
-        </p>
-      </div>
-
-      {/* Category tiles */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 440px), 1fr))',
-          gap: '1px',
-          backgroundColor: 'rgba(196,165,90,0.08)',
-        }}
-      >
-        {menuData.map((cat) => (
-          <CategoryTile key={cat.id} category={cat} onClick={() => onSelectCategory(cat.id)} />
-        ))}
-      </div>
-
-      {/* Allergen note */}
-      <div style={{ padding: '48px 16px' }}>
-        <AllergenNote />
-      </div>
-    </div>
-  );
-}
-
-// ─── MAIN EXPORT ─────────────────────────────────────────────────────────────
+// ─── ROOT ────────────────────────────────────────────────────────────────────
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
-  const handleSelectCategory = (id: string) => {
+  const handleSelect = (id: string) => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
     setActiveCategory(id);
   };
@@ -728,8 +670,8 @@ export default function Menu() {
   };
 
   if (activeCategory !== null) {
-    return <DetailView initialCategoryId={activeCategory} onBack={handleBack} />;
+    return <DetailView initialId={activeCategory} onBack={handleBack} />;
   }
 
-  return <LandingView onSelectCategory={handleSelectCategory} />;
+  return <LandingView onSelect={handleSelect} />;
 }
