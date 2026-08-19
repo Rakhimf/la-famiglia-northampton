@@ -52,7 +52,7 @@ export function HeroSection({ imageSrc, imageAlt, eyebrow, headline, subheading,
               {cta1 && (
                 <Link
                   to={cta1.href}
-                  className="bg-gold hover:bg-gold/90 text-white px-9 py-[14px] text-xs uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] font-semibold"
+                  className="bg-[#009246] hover:bg-[#007a3a] text-white px-9 py-[14px] text-xs uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] font-semibold"
                 >
                   {cta1.text}
                 </Link>
@@ -60,7 +60,7 @@ export function HeroSection({ imageSrc, imageAlt, eyebrow, headline, subheading,
               {cta2 && (
                 <Link
                   to={cta2.href}
-                  className="bg-dark hover:bg-dark/90 text-white px-9 py-[14px] text-xs uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] font-semibold"
+                  className="bg-white hover:bg-white/90 text-black px-9 py-[14px] text-xs uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] font-semibold"
                 >
                   {cta2.text}
                 </Link>
@@ -69,7 +69,7 @@ export function HeroSection({ imageSrc, imageAlt, eyebrow, headline, subheading,
                 <Link
                   to={cta3.href}
                   className={cta3.highlight
-                    ? "bg-red-600 hover:bg-red-700 text-white px-9 py-[14px] text-xs uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] font-semibold"
+                    ? "bg-[#CE2B37] hover:bg-[#b02530] text-white px-9 py-[14px] text-xs uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] font-semibold"
                     : "border border-dark text-dark hover:bg-dark hover:text-white px-9 py-[14px] text-xs uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px]"
                   }
                 >
