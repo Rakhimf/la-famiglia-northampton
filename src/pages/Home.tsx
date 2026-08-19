@@ -20,9 +20,6 @@ export default function Home() {
         cta3={{ text: 'Christmas Party', href: '/christmas-party', highlight: true }}
       />
 
-      <div className="py-12 md:py-20">
-        <FullBleedImage
-      </div>
 
       <div className="w-full">
         <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/lafmaigia%20website%20x2.mov" />
