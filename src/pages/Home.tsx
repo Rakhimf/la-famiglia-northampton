@@ -20,57 +20,29 @@ export default function Home() {
         cta3={{ text: 'Christmas Party', href: '/christmas-party', highlight: true }}
       />
 
-
-      <div className="w-full">
-        <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/lafmaigia%20website%20x2.mov" />
-      </div>
-
       <EditorialSection
-        eyebrow="About the Restaurant"
-        heading="Top Northampton Anniversary Venue"
-        body="Our food has a habit of becoming your newest addiction, and our live music gets loud after 20:00. Nestled within the historic Taylor Memorial Hall, La Famiglia blends Scottish Baronial architecture with the rustic charm of Italy."
-        cta={{ text: 'Our Story', href: '/about' }}
-      />
-
-      <div className="py-12 md:py-20">
-        <FullBleedImage
-          src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png"
-          alt="Restaurant interior"
-          heightClass="h-[70vh]"
-        />
-      </div>
-
-      <SplitSection
-        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_57_42%20PM.png"
-        imageAlt="Most popular dishes"
-        heading="Most Popular This Week"
+        eyebrow="Our Story"
+        heading="Born from History. Built on Passion"
         body={
-          <div className="space-y-6 mt-10">
-            {[
-              { name: 'Bucatini alla Carbonara', price: '£21.00', desc: 'Homemade bucatini tossed in a silky egg yolk and Pecorino Romano sauce with crisp guanciale and cracked black pepper.' },
-              { name: 'Truffle & Ricotta Ravioloni (v)', price: '£22.50', desc: 'Homemade ravioloni filled with truffle-infused ricotta, served in a truffle cream sauce.' },
-              { name: 'Rib-eye Steak', price: '£31.00', desc: '12oz charcoal-grilled rib-eye served with rosemary potatoes, grilled vegetables and a rich peppercorn sauce.' },
-              { name: 'Grilled Butterfly Sea Bass', price: '£29.00', desc: 'Whole butterfly sea bass grilled with roasted garlic, cherry tomato confit, extra virgin olive oil and Mediterranean chopped salsa.' }
-            ].map((dish, i) => (
-              <div key={dish.name} className={i !== 0 ? "pt-6 border-t border-dark/10" : ""}>
-                <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="font-serif text-[22px] text-cream">{dish.name}</h3>
-                  <span className="font-sans text-base text-gold ml-4">{dish.price}</span>
-                </div>
-                <p className="font-sans text-base text-muted">{dish.desc}</p>
-              </div>
-            ))}
-          </div>
+          <>
+            <p>Our restaurant, nestled within the historic Taylor Memorial Hall, marries Scottish Baronial architecture with Italy's quaint allure. The majestic entrance, framed by soaring turrets and a moving memorial inscription, invites you into a setting steeped in history and refinement.</p>
+            <p>The expansive main hall, once a two-story structure, has been carefully converted into a cozy dining area. Our chefs prepare genuine Italian dishes using fresh, locally-sourced ingredients, offering a dining experience as enriched as the venue's storied past.</p>
+            <p>Join us for a meal where architectural splendor meets Italian culinary artistry, all housed within a building that celebrates a significant local legacy. This space, once dedicated to memory, now fosters new, delightful moments as it welcomes diners and celebrants alike.</p>
+          </>
         }
-        cta={{ text: 'View Full Menu', href: '/menu' }}
-        imageLeft={true}
+        className="pb-8 md:pb-12"
       />
 
-      <div className="py-12 md:py-20">
-        <FullBleedImage
-          src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_45_42%20PM.png"
-          alt="Atmosphere shot"
-          heightClass="h-[65vh]"
+      <div className="w-full grid grid-cols-2 h-[70vh]">
+        <img
+          src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png"
+          alt="Restaurant dishes"
+          className="w-full h-full object-cover"
+        />
+        <img
+          src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Screenshot%202026-08-19%20at%2013.27.26.png"
+          alt="Food presentation"
+          className="w-full h-full object-cover"
         />
       </div>
 
@@ -84,13 +56,11 @@ export default function Home() {
         imageLeft={false}
       />
 
-      <div className="py-12 md:py-20">
-        <FullBleedImage
-          src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_50_31%20PM.png"
-          alt="Event atmosphere"
-          heightClass="h-[70vh]"
-        />
-      </div>
+      <FullBleedImage
+        src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_50_31%20PM.png"
+        alt="Event atmosphere"
+        heightClass="h-[70vh]"
+      />
 
       <div className="w-full">
         <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/lafamiglia%20website%20video%202.mov" />
@@ -119,21 +89,6 @@ export default function Home() {
       </section>
 
       <TestimonialSlider />
-
-      <div className="py-12 md:py-20">
-        <FullBleedImage
-          src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_58_52%20PM.png"
-          alt="Food preparation"
-          heightClass="h-[60vh]"
-        />
-      </div>
-
-      <EditorialSection
-        eyebrow="The Story"
-        heading="A Building with a History. A Kitchen with a Soul."
-        body="Our restaurant, located within the historic Taylor Memorial Hall, blends Scottish Baronial architecture with the rustic charm of Italy. The grand entrance, flanked by towering turrets, welcomes you into a venue rich in history and elegance."
-        cta={{ text: 'Read More', href: '/about' }}
-      />
 
       <BookingCTA />
     </div>

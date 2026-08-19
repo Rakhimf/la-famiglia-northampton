@@ -9,11 +9,12 @@ interface EditorialSectionProps {
   body: string | React.ReactNode;
   cta?: { text: string; href: string };
   align?: 'left' | 'center';
+  className?: string;
 }
 
-export function EditorialSection({ eyebrow, heading, body, cta, align = 'left' }: EditorialSectionProps) {
+export function EditorialSection({ eyebrow, heading, body, cta, align = 'left', className }: EditorialSectionProps) {
   return (
-    <section className="py-24 md:py-40 px-6 lg:px-20 bg-bg">
+    <section className={cn("py-24 md:py-40 px-6 lg:px-20 bg-bg", className)}>
       <div className={cn(
         "max-w-[640px]",
         align === 'center' ? "text-center mx-auto" : "text-left ml-0"

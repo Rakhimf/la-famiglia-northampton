@@ -5,9 +5,11 @@ interface FullBleedImageProps {
   src: string;
   alt: string;
   heightClass?: string;
+  objectPosition?: string;
+  objectFit?: 'cover' | 'contain';
 }
 
-export function FullBleedImage({ src, alt, heightClass = 'h-[70vh]' }: FullBleedImageProps) {
+export function FullBleedImage({ src, alt, heightClass = 'h-[70vh]', objectPosition = 'center', objectFit = 'cover' }: FullBleedImageProps) {
   const ref = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -31,8 +33,8 @@ export function FullBleedImage({ src, alt, heightClass = 'h-[70vh]' }: FullBleed
         <motion.img
           src={src}
           alt={alt}
-          className="w-full h-full object-cover"
-          style={{ opacity }}
+          className={`w-full h-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+          style={{ opacity, objectPosition }}
           initial={{ scale: 1.2 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
