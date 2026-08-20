@@ -23,7 +23,7 @@ export function HeroSection({ imageSrc, imageAlt, eyebrow, headline, subheading,
       <div className="absolute inset-0 bg-black/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
-      <div className="relative z-10 flex flex-col justify-end h-full px-6 lg:px-20 pb-16 md:pb-24">
+      <div className="relative z-10 flex flex-col justify-center h-full px-6 lg:px-20 pt-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
