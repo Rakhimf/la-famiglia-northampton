@@ -14,7 +14,7 @@ export default function Home() {
         imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Screenshot%202026-07-14%20at%2020.52.20.png"
         imageAlt="Interior of La Famiglia"
         headline="Where History Meets Italian Soul"
-        subheading="Fine dining, live music and an evening you won't forget — in the heart of Northampton."
+        subheading="Fine dining, live music and an evening you won't forget."
         cta1={{ text: 'Reserve a Table', href: '/book-now' }}
         cta2={{ text: 'Explore the Menu', href: '/menu' }}
         cta3={{ text: 'Christmas Party', href: '/christmas-party', highlight: true }}
@@ -33,7 +33,7 @@ export default function Home() {
         className="pb-8 md:pb-12"
       />
 
-      <div className="w-full grid grid-cols-2 h-[70vh]">
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 h-[50vh] md:h-[70vh] gap-1">
         <img
           src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png"
           alt="Restaurant dishes"
@@ -42,7 +42,12 @@ export default function Home() {
         <img
           src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Screenshot%202026-08-19%20at%2013.27.26.png"
           alt="Food presentation"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover hidden md:block"
+        />
+        <img
+          src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_50_31%20PM.png"
+          alt="La Famiglia atmosphere"
+          className="w-full h-full object-cover hidden md:block"
         />
       </div>
 
@@ -56,11 +61,7 @@ export default function Home() {
         imageLeft={false}
       />
 
-      <FullBleedImage
-        src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_50_31%20PM.png"
-        alt="Event atmosphere"
-        heightClass="h-[70vh]"
-      />
+
 
       <div className="w-full">
         <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/lafamiglia%20website%20video%202.mov" />

@@ -48,7 +48,7 @@ export function HeroSection({ imageSrc, imageAlt, eyebrow, headline, subheading,
           )}
 
           {(cta1 || cta2 || cta3) && (
-            <div className="flex flex-wrap gap-4 items-center">
+            <div className="flex flex-row flex-wrap gap-3 items-center mt-6">
               {cta1 && (
                 <Link
                   to={cta1.href}
