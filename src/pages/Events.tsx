@@ -31,7 +31,7 @@ export default function Events() {
       />
 
       {/* Notice Block */}
-      <section className="bg-bg pb-24 md:pb-40 px-6 lg:px-20">
+      <section className="bg-bg py-10 px-6 lg:px-20">
         <div className="max-w-[640px]">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="font-sans font-light text-base md:text-lg text-cream leading-[1.8] mb-4">
