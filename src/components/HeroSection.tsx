@@ -41,7 +41,7 @@ export function HeroSection({ imageSrc, imageAlt, eyebrow, headline, subheading,
           </h1>
 
           {subheading && (
-            <p className="font-sans font-bold text-base md:text-xl text-white leading-[1.6] mb-6 max-w-[600px] [text-shadow:_1px_1px_6px_rgb(0_0_0_/_80%)]">
+            <p className="font-sans font-bold text-xl md:text-3xl text-white leading-[1.6] mb-6 max-w-[600px] [text-shadow:_1px_1px_6px_rgb(0_0_0_/_80%)]">
               {subheading}
             </p>
           )}
