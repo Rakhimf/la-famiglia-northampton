@@ -211,7 +211,7 @@ function CategoryTile({
 
 function LandingView({ onSelect }: { onSelect: (id: string) => void }) {
   return (
-    <div style={{ backgroundColor: '#0D0C0A', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#0D0C0A', minHeight: '100vh', paddingTop: '90px' }}>
       {/* Tiles stacked with 3px gap */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
         {menuData.map((cat) => (
