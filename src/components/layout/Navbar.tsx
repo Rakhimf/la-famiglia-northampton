@@ -72,7 +72,7 @@ export function Navbar() {
             <div className="hidden xl:flex items-center">
               <Link
                 to="/book-now"
-                className="bg-[#009246] text-white px-6 py-3 text-sm font-semibold uppercase tracking-wider hover:bg-[#007a3a] transition-colors duration-200 rounded"
+                className="bg-gold text-white px-6 py-3 text-sm font-semibold uppercase tracking-wider hover:bg-gold/90 transition-colors duration-200 rounded"
               >
                 Reserve Now
               </Link>
@@ -82,7 +82,7 @@ export function Navbar() {
             <div className="xl:hidden flex items-center gap-3">
               <Link
                 to="/book-now"
-                className="bg-[#009246] text-white px-4 py-2 text-sm font-semibold uppercase tracking-wider hover:bg-[#007a3a] rounded"
+                className="bg-gold text-white px-4 py-2 text-sm font-semibold uppercase tracking-wider rounded"
               >
                 Reserve
               </Link>
