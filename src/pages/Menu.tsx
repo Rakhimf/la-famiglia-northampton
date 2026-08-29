@@ -28,7 +28,7 @@ const menuData: MenuCategoryData[] = [
     id: 'starters',
     name: 'Starters',
     count: 9,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png`,
+    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png`,
     items: [
       { name: 'Pizza Garlic Bread with Mozzarella', badges: ['V'], description: '', price: '£11.50' },
       { name: 'Buratta Pizza with Seasoned Tomatoes', badges: ['V'], description: '', price: '£12.50' },
@@ -79,7 +79,7 @@ const menuData: MenuCategoryData[] = [
     id: 'kids',
     name: 'Kids',
     count: 4,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png`,
+    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png`,
     note: 'Available for children up to 12 years of age. £9.50 per dish.',
     items: [
       { name: 'Spaghetti al Pomodoro', badges: ['V'], description: '', price: '£9.50' },
