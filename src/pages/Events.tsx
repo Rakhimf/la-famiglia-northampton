@@ -22,7 +22,7 @@ export default function Events() {
             <p>
               Whether it's an intimate Christmas dinner, a New Year celebration or a seasonal gathering with friends and family, La Famiglia sets the perfect scene. Our festive menus bring together the warmth of Italian tradition and the grandeur of our historic venue.
             </p>
-            <div className="mt-14 mb-8">
+            <div className="mt-6 mb-4">
               <p className="font-serif italic text-2xl text-gold mb-4">Festive Menu coming soon...</p>
               <p className="font-sans text-sm text-muted">Please contact us directly for our current seasonal offerings and pricing.</p>
             </div>
