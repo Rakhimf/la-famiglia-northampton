@@ -28,7 +28,7 @@ const menuData: MenuCategoryData[] = [
     id: 'starters',
     name: 'Starters',
     count: 9,
-    photo: `${R2}ChatGPT%20Images/starters.jpg`,
+    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png`,
     items: [
       { name: 'Pizza Garlic Bread with Mozzarella', badges: ['V'], description: '', price: '£11.50' },
       { name: 'Buratta Pizza with Seasoned Tomatoes', badges: ['V'], description: '', price: '£12.50' },
@@ -42,11 +42,12 @@ const menuData: MenuCategoryData[] = [
     ],
   },
   {
-    id: 'pasta',
-    name: 'Pasta & Risotto',
-    count: 11,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png`,
+    id: 'mains',
+    name: 'Mains',
+    count: 22,
+    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_57_42%20PM.png`,
     items: [
+      // Pasta & Risotto
       { name: 'Bucatini alla Carbonara', badges: [], description: 'Homemade bucatini tossed in a silky egg yolk and Pecorino Romano sauce with crisp guanciale and cracked black pepper.', price: '£21.00' },
       { name: 'Bucatini con Polpette', badges: [], description: 'Homemade bucatini with beef meatballs in a rich tomato sauce, finished with Parmesan.', price: '£21.00' },
       { name: 'Seafood Tagliatelle', badges: [], description: 'Artisanal tagliatelle with fresh seafood, sautéed in white wine, garlic, extra virgin olive oil and aromatic herbs.', price: '£23.00' },
@@ -58,66 +59,25 @@ const menuData: MenuCategoryData[] = [
       { name: 'Aberdeen Angus Beef Lasagna', badges: [], description: 'Pasta layered with Aberdeen Angus beef ragù, topped with béchamel.', price: '£23.00' },
       { name: "Jumbo Prawn & 'Nduja Risotto", badges: [], description: "Creamy risotto with juicy jumbo prawns and spicy Calabrian 'nduja sausage, finished with a touch of Parmesan.", price: '£22.00' },
       { name: 'Mushroom Risotto', badges: ['V'], description: 'Creamy risotto with earthy mushrooms, slow-cooked to a rich texture and finished with aged Parmesan.', price: '£21.00' },
-    ],
-  },
-  {
-    id: 'fish',
-    name: 'Fish & Seafood',
-    count: 4,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_57_42%20PM.png`,
-    items: [
+      // Fish & Seafood
       { name: 'Roasted Fillet of Plaice', badges: [], description: 'Delicate fillet of plaice, gently roasted and finished with a lemon, caper and butter sauce, served with seasonal green vegetables.', price: '£22.00' },
       { name: 'Grilled Butterfly Sea Bass', badges: [], description: 'Whole butterfly sea bass grilled and served with roasted garlic and cherry tomato confit, extra virgin olive oil and a Mediterranean chopped salsa.', price: '£29.00' },
       { name: 'Grilled Turbot', badges: [], description: '700g–800g, perfect for sharing. Whole turbot, grilled and served with roasted garlic and cherry tomato confit, extra virgin olive oil, parsley and a Mediterranean chopped salsa.', price: '£55.00' },
       { name: 'Grilled Octopus', badges: [], description: 'Tender grilled octopus served with roasted vegetables and a marinara sauce.', price: '£32.00' },
-    ],
-  },
-  {
-    id: 'grill',
-    name: 'Charcoal Grill',
-    count: 3,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_58_52%20PM.png`,
-    items: [
+      // Charcoal Grill
       { name: 'Rib-eye Steak', badges: [], description: '12oz rib-eye steak served with roasted vegetables and a classic peppercorn sauce.', price: '£31.00' },
       { name: 'Fillet Mignon', badges: [], description: 'Tender fillet steak with garlic and pecorino mashed potatoes, and grilled vegetables.', price: '£32.00' },
       { name: 'Lamb Chops', badges: [], description: 'Rosemary and garlic-marinated grilled lamb chops, accompanied by creamy mashed potatoes and finished with a red wine jus.', price: '£29.50' },
-    ],
-  },
-  {
-    id: 'steaks',
-    name: 'Premium Steaks',
-    count: 4,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2009_00_19%20PM.png`,
-    note: 'Aged a minimum of 35 days — subject to availability. Grilled over charcoal and finished at your table.',
-    items: [
-      { name: '35oz T-Bone Steak', badges: [], description: 'To share.', price: '£72.00' },
-      { name: '24oz Chateaubriand Steak', badges: [], description: 'To share.', price: '£80.00' },
-      { name: '42oz Dry-Aged Tomahawk Steak', badges: [], description: '', price: '£120.00' },
+      // Premium Steaks
+      { name: '35oz T-Bone Steak', badges: [], description: 'Aged 35 days. To share.', price: '£72.00' },
+      { name: '24oz Chateaubriand Steak', badges: [], description: 'Aged 35 days. To share.', price: '£80.00' },
+      { name: '42oz Dry-Aged Tomahawk Steak', badges: [], description: 'Aged 35 days.', price: '£120.00' },
       { name: 'Japanese A5 Wagyu Rib-Eye (BMS 12)', badges: [], description: '300g.', price: '£90.00' },
     ],
   },
   {
-    id: 'sides',
-    name: 'Sides & Sauces',
-    count: 11,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_45_42%20PM.png`,
-    items: [
-      { name: 'Mixed Grilled Vegetables', badges: ['V'], description: '', price: '£6.50' },
-      { name: 'Roasted Rosemary Potatoes', badges: ['V'], description: '', price: '£6.50' },
-      { name: 'Mashed Potato', badges: ['V'], description: '', price: '£6.50' },
-      { name: 'Potato Fries', badges: ['V'], description: '', price: '£6.50' },
-      { name: 'Green Salad', badges: ['V'], description: '', price: '£6.50' },
-      { name: 'Tomato Salad', badges: ['V'], description: '', price: '£6.50' },
-      { name: 'Marinara Sauce', badges: [], description: '', price: '£3.50' },
-      { name: 'Peppercorn Sauce', badges: [], description: '', price: '£3.50' },
-      { name: 'Gorgonzola Sauce', badges: [], description: '', price: '£3.50' },
-      { name: 'Homemade Gravy', badges: [], description: '', price: '£3.50' },
-      { name: 'Aioli Sauce', badges: [], description: '', price: '£3.50' },
-    ],
-  },
-  {
     id: 'kids',
-    name: "Children's Menu",
+    name: 'Kids',
     count: 4,
     photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png`,
     note: 'Available for children up to 12 years of age. £9.50 per dish.',
@@ -199,7 +159,7 @@ function CategoryTile({
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundColor: hover ? 'rgba(0,0,0,0.42)' : 'rgba(0,0,0,0.50)',
+          backgroundColor: hover ? 'rgba(0,0,0,0.30)' : 'rgba(0,0,0,0.38)',
           transition: 'background-color 0.3s ease',
         }}
       />
