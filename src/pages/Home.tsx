@@ -78,7 +78,7 @@ export default function Home() {
             { num: '01', title: 'Live Music Evenings', desc: 'Our resident musicians perform every Friday and Saturday from 20:00. Italian classics, contemporary hits, and performances that make the evening unforgettable.' },
             { num: '02', title: 'Private Dining', desc: 'Exclusive hire of our main hall for birthdays, anniversaries, and corporate events. Speak to us about tailoring the evening.' },
             { num: '03', title: 'Anniversary & Date Night', desc: 'Celebrated as Northampton\'s top anniversary venue. Let us know your occasion and we\'ll make it special.' },
-            { num: '04', title: 'Sunday Lunch', desc: 'Join us for a relaxed Sunday lunch in our historic dining room. Saturday from 12:00, Sunday from 12:00.' },
+            { num: '04', title: 'Sunday Lunch', desc: 'Join us for a relaxed Sunday lunch in our historic dining room.' },
           ].map(item => (
             <div key={item.num} className="flex flex-col">
               <span className="font-serif text-3xl text-gold mb-6">{item.num}</span>
