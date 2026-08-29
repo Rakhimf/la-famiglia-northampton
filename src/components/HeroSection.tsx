@@ -51,7 +51,7 @@ export function HeroSection({ imageSrc, imageAlt, eyebrow, headline, subheading,
               {cta1 && (
                 <Link
                   to={cta1.href}
-                  className="bg-gold hover:bg-gold/90 text-white px-5 py-3 text-[11px] uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] font-semibold whitespace-nowrap"
+                  className="bg-[#009246] hover:bg-[#007a3a] text-white px-5 py-3 text-[11px] uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] font-semibold whitespace-nowrap"
                 >
                   {cta1.text}
                 </Link>
