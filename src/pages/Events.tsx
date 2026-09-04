@@ -22,9 +22,40 @@ export default function Events() {
             <p>
               Whether it's an intimate Christmas dinner, a New Year celebration or a seasonal gathering with friends and family, La Famiglia sets the perfect scene. Our festive menus bring together the warmth of Italian tradition and the grandeur of our historic venue.
             </p>
-            <div className="mt-6 mb-4">
-              <p className="font-serif italic text-2xl text-gold mb-4">Festive Menu coming soon...</p>
-              <p className="font-sans text-sm text-muted">Please contact us directly for our current seasonal offerings and pricing.</p>
+            <div className="mt-8">
+              <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-8">Festive Menu 2026</p>
+
+              <div className="mb-10">
+                <h3 className="font-serif text-2xl text-gold uppercase tracking-widest mb-6 pb-2 border-b border-gold/30">Appetizers</h3>
+                <div className="space-y-6">
+                  <div><p className="font-serif text-lg text-cream">Italian Antipasti</p><p className="font-sans text-sm text-muted mt-1">A selection of Italian cured meats and cheeses, served with olives, nuts, fruits, pickles and bread.</p></div>
+                  <div><p className="font-serif text-lg text-cream">Arancini al Ragù</p><p className="font-sans text-sm text-muted mt-1">Crispy Sicilian risotto balls filled with rich beef ragù, served with marinara sauce and finished with a sprinkle of Parmesan.</p></div>
+                  <div><p className="font-serif text-lg text-cream">Tiger Prawns</p><p className="font-sans text-sm text-muted mt-1">Tiger prawns sautéed in garlic and chilli butter, finished with fresh herbs and served with toasted sourdough.</p></div>
+                  <div><p className="font-serif text-lg text-cream">Festive Camembert <span className="text-sm text-gold">(V)</span></p><p className="font-sans text-sm text-muted mt-1">Whole Camembert baked until warm and creamy with pistachios, dried fruit and caramelised onions.</p></div>
+                </div>
+              </div>
+
+              <div className="mb-10">
+                <h3 className="font-serif text-2xl text-gold uppercase tracking-widest mb-6 pb-2 border-b border-gold/30">Main Dishes</h3>
+                <div className="space-y-6">
+                  <div><p className="font-serif text-lg text-cream">Festive Turkey</p><p className="font-sans text-sm text-muted mt-1">Roast turkey served with sweet potato mash, seasonal vegetables and cranberry sauce.</p></div>
+                  <div><p className="font-serif text-lg text-cream">Chicken Supreme</p><p className="font-sans text-sm text-muted mt-1">Grilled chicken supreme served with creamy mushroom orzo.</p></div>
+                  <div><p className="font-serif text-lg text-cream">Stuffed Salmon</p><p className="font-sans text-sm text-muted mt-1">Oven-baked salmon fillet filled with creamy spinach, served with buttery mashed potatoes, tender asparagus and cranberry sauce.</p></div>
+                  <div><p className="font-serif text-lg text-cream">Rib-eye Steak</p><p className="font-sans text-sm text-muted mt-1">12oz, 35-day dry-aged rib-eye steak with roasted bone marrow, seasonal roasted vegetables and classic peppercorn sauce.</p></div>
+                  <div><p className="font-serif text-lg text-cream">Truffle & Ricotta Ravioloni <span className="text-sm text-gold">(V)</span></p><p className="font-sans text-sm text-muted mt-1">Homemade ravioloni filled with truffle-infused ricotta, served in a truffle cream sauce.</p></div>
+                </div>
+              </div>
+
+              <div className="mb-10">
+                <h3 className="font-serif text-2xl text-gold uppercase tracking-widest mb-6 pb-2 border-b border-gold/30">Desserts</h3>
+                <div className="space-y-4">
+                  <div><p className="font-serif text-lg text-cream">Italian Tiramisu</p></div>
+                  <div><p className="font-serif text-lg text-cream">Cheesecake</p></div>
+                  <div><p className="font-serif text-lg text-cream">Fruit Sorbet</p></div>
+                </div>
+              </div>
+
+              <p className="font-sans text-xs text-muted italic border-t border-white/10 pt-6">Our menu contains allergens. If you suffer from a food allergy or intolerance, please let a member of the restaurant team know upon placing your order, however we cannot fully guarantee that the food in these premises will be free from allergens.</p>
             </div>
           </>
         }
