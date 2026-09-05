@@ -84,12 +84,10 @@ export default function Events() {
         imageLeft={true}
       />
 
-      <div className="w-full">
-        <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1718698905.mp4" />
-      </div>
-
-      <div className="w-full">
-        <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/VideoStar%20(2).mov" />
+      <div className="px-6 lg:px-20 py-12">
+        <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl">
+          <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/VideoStar%20(2).mov" />
+        </div>
       </div>
 
       <BookingCTA />
