@@ -84,6 +84,10 @@ export default function Events() {
         imageLeft={true}
       />
 
+      <div className="w-full">
+        <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1718698905.mp4" />
+      </div>
+
       <BookingCTA />
     </div>
   );
