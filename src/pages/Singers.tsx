@@ -10,8 +10,8 @@ export default function Singers() {
         imageAlt="Live music at La Famiglia"
         eyebrow="Live Entertainment"
         headline="Our Singers"
-        subheading="Every Friday & Saturday from 20:00 — live music that makes the evening unforgettable."
-        cta1={{ text: 'Reserve a Table', href: '/book-now' }}
+        subheading="Every Friday and Saturday from 20:00 - live music that makes the evening unforgettable."
+        cta1={{ text: "Reserve a Table", href: "/book-now" }}
       />
 
       <section className="py-16 px-6 lg:px-20">
@@ -21,14 +21,14 @@ export default function Singers() {
           <p className="font-sans text-base text-muted leading-[1.8]">
             La Famiglia comes alive every Friday and Saturday evening with our resident live performers.
             From Italian classics to contemporary hits, our singers bring an electric atmosphere to your dining experience.
-            Music starts from 20:00 — book your table and stay for the show.
+            Music starts from 20:00 - book your table and stay for the show.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto mb-16">
           <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/8">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
-              <span className="font-serif text-3xl text-gold">♪</span>
+              <span className="font-serif text-3xl text-gold">Music Note</span>
             </div>
             <h3 className="font-serif text-2xl text-cream mb-2">Just Juseppe</h3>
             <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
@@ -36,7 +36,7 @@ export default function Singers() {
           </div>
           <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/8">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
-              <span className="font-serif text-3xl text-gold">♪</span>
+              <span className="font-serif text-3xl text-gold">Music Note</span>
             </div>
             <h3 className="font-serif text-2xl text-cream mb-2">Dorell</h3>
             <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
@@ -44,7 +44,7 @@ export default function Singers() {
           </div>
           <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/8">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
-              <span className="font-serif text-3xl text-gold">♪</span>
+              <span className="font-serif text-3xl text-gold">Music Note</span>
             </div>
             <h3 className="font-serif text-2xl text-cream mb-2">Jess</h3>
             <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
