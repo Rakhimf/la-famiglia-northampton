@@ -25,28 +25,38 @@ export default function Singers() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[900px] mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto mb-16">
           <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/8">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
               <span className="font-serif text-3xl text-gold">♪</span>
             </div>
-            <h3 className="font-serif text-2xl text-cream mb-2">Coming Soon</h3>
-            <p className="font-sans text-sm text-gold mb-3">Friday Nights</p>
-            <p className="font-sans text-sm text-muted leading-[1.6]">Singer details coming soon.</p>
+            <h3 className="font-serif text-2xl text-cream mb-2">Just Juseppe</h3>
+            <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
+            <p className="font-sans text-sm text-muted leading-[1.6]">Bringing the soul of Italy to every performance with incredible vocal talent and charisma.</p>
           </div>
           <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/8">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
               <span className="font-serif text-3xl text-gold">♪</span>
             </div>
-            <h3 className="font-serif text-2xl text-cream mb-2">Coming Soon</h3>
-            <p className="font-sans text-sm text-gold mb-3">Saturday Nights</p>
-            <p className="font-sans text-sm text-muted leading-[1.6]">Singer details coming soon.</p>
+            <h3 className="font-serif text-2xl text-cream mb-2">Dorell</h3>
+            <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
+            <p className="font-sans text-sm text-muted leading-[1.6]">A captivating performer delivering unforgettable evenings of live music and entertainment.</p>
+          </div>
+          <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/8">
+            <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
+              <span className="font-serif text-3xl text-gold">♪</span>
+            </div>
+            <h3 className="font-serif text-2xl text-cream mb-2">Jess</h3>
+            <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
+            <p className="font-sans text-sm text-muted leading-[1.6]">Stunning vocal performances that light up the room every Friday and Saturday from 20:00.</p>
           </div>
         </div>
       </section>
 
-      <div className="w-full">
-        <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1713209036.mov" />
+      <div className="px-6 lg:px-20 py-12">
+        <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl">
+          <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1713209036.mov" />
+        </div>
       </div>
 
       <BookingCTA />
