@@ -63,8 +63,10 @@ export default function Home() {
 
 
 
-      <div className="w-full">
-        <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/VideoStar%20(3).mov" />
+      <div className="px-6 lg:px-20 py-12">
+        <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl">
+          <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/VideoStar%20(3).mov" />
+        </div>
       </div>
 
       <section className="py-24 md:py-40 px-6 lg:px-20 bg-bg">
