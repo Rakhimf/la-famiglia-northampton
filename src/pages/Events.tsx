@@ -92,6 +92,10 @@ export default function Events() {
         <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/VideoStar%20(2).mov" />
       </div>
 
+      <div className="w-full">
+        <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/VideoStar%20(2).mov" />
+      </div>
+
       <BookingCTA />
     </div>
   );
