@@ -2,27 +2,28 @@ import { HeroSection } from '@/components/HeroSection';
 import { EditorialSection } from '@/components/EditorialSection';
 import { SplitSection } from '@/components/SplitSection';
 import { BookingCTA } from '@/components/BookingCTA';
+import { VideoPlayer } from '@/components/VideoPlayer';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 export default function Events() {
   return (
     <div className="bg-bg text-cream">
-      <HeroSection 
+      <HeroSection
         imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_50_31%20PM.png"
         imageAlt="Events at La Famiglia"
         eyebrow="Special Events"
         headline="Celebrate in Style"
       />
 
-      <EditorialSection 
+      <EditorialSection
         heading="Festive Dining at La Famiglia"
         body={
           <>
             <p>
               Whether it's an intimate Christmas dinner, a New Year celebration or a seasonal gathering with friends and family, La Famiglia sets the perfect scene. Our festive menus bring together the warmth of Italian tradition and the grandeur of our historic venue.
             </p>
-            <div className="mt-8">
+            <div className="mt-6 mb-4">
               <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-8">Festive Menu 2026</p>
 
               <div className="mb-10">
@@ -61,7 +62,6 @@ export default function Events() {
         }
       />
 
-      {/* Notice Block */}
       <section className="bg-bg py-10 px-6 lg:px-20">
         <div className="max-w-[640px]">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
@@ -75,7 +75,7 @@ export default function Events() {
         </div>
       </section>
 
-      <SplitSection 
+      <SplitSection
         imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png"
         imageAlt="Private hire for events"
         heading="Private Hire for Your Festive Event"
@@ -86,10 +86,6 @@ export default function Events() {
 
       <div className="w-full">
         <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1718698905.mp4" />
-      </div>
-
-      <div className="w-full">
-        <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/VideoStar%20(2).mov" />
       </div>
 
       <div className="w-full">
