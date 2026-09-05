@@ -10,6 +10,7 @@ const navLinks = [
   { name: 'Private Events', path: '/events' },
   { name: 'Christmas Party', path: '/christmas-party' },
   { name: 'Gallery', path: '/gallery' },
+  { name: 'Our Singers', path: '/singers' },
   { name: 'Contact', path: '/contact' },
 ];
 
