@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { VideoPlayer } from '@/components/VideoPlayer';
 
 // ─── TYPES ──────────────────────────────────────────────────────────────────
 
