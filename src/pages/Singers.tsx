@@ -34,15 +34,6 @@ export default function Singers() {
           </p>
         </div>
 
-        <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl mb-8">
-          <video
-            src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1713209036.mov"
-            controls
-            playsInline
-            style={{ width: '100%', maxHeight: '500px', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
-
         <div className="max-w-[900px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
           {portraitVideos.map((src, i) => (
             <div key={i} className="rounded-xl overflow-hidden shadow-xl bg-black" style={{ aspectRatio: '9/16' }}>
