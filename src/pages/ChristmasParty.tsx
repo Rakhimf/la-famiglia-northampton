@@ -39,6 +39,10 @@ export default function ChristmasParty() {
           >
             <p className="font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold mb-6">Festive Menu</p>
             <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] text-cream uppercase tracking-widest">Christmas Party Menu</h2>
+            <div className="mt-6">
+              <p className="font-serif italic text-xl text-gold mb-1">£60 per person — Friday &amp; Saturday</p>
+              <p className="font-serif italic text-lg text-gold/80">£50 per person — Other Days</p>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
