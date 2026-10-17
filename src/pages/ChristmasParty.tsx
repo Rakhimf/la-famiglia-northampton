@@ -113,11 +113,6 @@ export default function ChristmasParty() {
             </div>
           </div>
 
-          <div className="mt-16 text-center mb-8">
-            <p className="font-serif italic text-2xl text-gold mb-2">£60 per person — Friday &amp; Saturday</p>
-            <p className="font-serif italic text-xl text-gold/80">£50 per person — Other Days</p>
-          </div>
-
           <div className="pt-8 border-t border-white/10">
             <p className="font-sans text-xs text-muted text-center leading-relaxed">Our menu contains allergens. If you suffer from a food allergy or intolerance, please let a member of the restaurant team know upon placing your order, however we cannot fully guarantee that the food in these premises will be free from allergens.</p>
           </div>
