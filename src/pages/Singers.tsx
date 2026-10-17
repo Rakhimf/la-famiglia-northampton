@@ -26,7 +26,7 @@ export default function Singers() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto mb-16">
-          <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/8">
+          <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/10">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
               <span className="font-serif text-3xl text-gold">Music Note</span>
             </div>
@@ -34,7 +34,7 @@ export default function Singers() {
             <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
             <p className="font-sans text-sm text-muted leading-[1.6]">Bringing the soul of Italy to every performance with incredible vocal talent and charisma.</p>
           </div>
-          <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/8">
+          <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/10">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
               <span className="font-serif text-3xl text-gold">Music Note</span>
             </div>
@@ -42,7 +42,7 @@ export default function Singers() {
             <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
             <p className="font-sans text-sm text-muted leading-[1.6]">A captivating performer delivering unforgettable evenings of live music and entertainment.</p>
           </div>
-          <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/8">
+          <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/10">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
               <span className="font-serif text-3xl text-gold">Music Note</span>
             </div>
