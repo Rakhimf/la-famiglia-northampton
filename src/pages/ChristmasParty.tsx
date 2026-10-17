@@ -41,49 +41,76 @@ export default function ChristmasParty() {
             <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] text-cream uppercase tracking-widest">Christmas Party Menu</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {/* Starters */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+            {/* Appetizers */}
             <div>
-              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Starters</h3>
+              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Appetizers</h3>
               <div className="space-y-6">
                 <div>
-                  <p className="font-serif text-lg text-cream">Bruschetta Trio</p>
-                  <p className="font-sans text-sm text-muted">Classic tomato & basil, chicken liver pate, prosciutto & stracchino</p>
+                  <p className="font-serif text-lg text-cream">Italian Antipasti</p>
+                  <p className="font-sans text-sm text-muted">A selection of Italian cured meats and cheeses, served with olives, nuts, fruits, pickles and bread.</p>
                 </div>
                 <div>
-                  <p className="font-serif text-lg text-cream">Burrata with Roasted Vegetables</p>
-                  <p className="font-sans text-sm text-muted">Creamy burrata served with seasonal roasted vegetables</p>
+                  <p className="font-serif text-lg text-cream">Arancini al Ragù</p>
+                  <p className="font-sans text-sm text-muted">Crispy Sicilian risotto balls filled with rich beef ragù, served with marinara sauce and finished with a sprinkle of Parmesan.</p>
                 </div>
                 <div>
-                  <p className="font-serif text-lg text-cream">King Prawns</p>
-                  <p className="font-sans text-sm text-muted">Sauteed in garlic and chilli butter</p>
+                  <p className="font-serif text-lg text-cream">Tiger Prawns</p>
+                  <p className="font-sans text-sm text-muted">Tiger prawns sautéed in garlic and chilli butter, finished with fresh herbs and served with toasted sourdough.</p>
+                </div>
+                <div>
+                  <p className="font-serif text-lg text-cream">Festive Camembert <span className="text-xs">(V)</span></p>
+                  <p className="font-sans text-sm text-muted">Whole Camembert baked until warm and creamy with pistachios, dried fruit and caramelised onions.</p>
                 </div>
               </div>
             </div>
 
             {/* Mains */}
             <div>
-              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Mains</h3>
+              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Main Dishes</h3>
               <div className="space-y-6">
                 <div>
-                  <p className="font-serif text-lg text-cream">Roast Turkey</p>
-                  <p className="font-sans text-sm text-muted">Traditional roast turkey with all the trimmings</p>
+                  <p className="font-serif text-lg text-cream">Festive Turkey</p>
+                  <p className="font-sans text-sm text-muted">Roast turkey served with sweet potato mash, seasonal vegetables and cranberry sauce.</p>
                 </div>
                 <div>
-                  <p className="font-serif text-lg text-cream">Fillet Mignon</p>
-                  <p className="font-sans text-sm text-muted">Tender fillet steak with garlic mash and seasonal vegetables</p>
+                  <p className="font-serif text-lg text-cream">Chicken Supreme</p>
+                  <p className="font-sans text-sm text-muted">Grilled chicken supreme served with creamy mushroom orzo.</p>
                 </div>
                 <div>
-                  <p className="font-serif text-lg text-cream">Truffle Ravioloni</p>
-                  <p className="font-sans text-sm text-muted">Homemade ravioloni with truffle cream sauce</p>
+                  <p className="font-serif text-lg text-cream">Stuffed Salmon</p>
+                  <p className="font-sans text-sm text-muted">Oven-baked salmon fillet filled with creamy spinach, served with buttery mashed potatoes, tender asparagus and cranberry sauce.</p>
+                </div>
+                <div>
+                  <p className="font-serif text-lg text-cream">Rib-eye Steak</p>
+                  <p className="font-sans text-sm text-muted">12oz, 35-day dry-aged rib-eye steak with roasted bone marrow, seasonal roasted vegetables and classic peppercorn sauce.</p>
+                </div>
+                <div>
+                  <p className="font-serif text-lg text-cream">Truffle & Ricotta Ravioloni <span className="text-xs">(V)</span></p>
+                  <p className="font-sans text-sm text-muted">Homemade ravioloni filled with truffle-infused ricotta, served in a truffle cream sauce.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Desserts */}
+            <div>
+              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Desserts</h3>
+              <div className="space-y-6">
+                <div>
+                  <p className="font-serif text-lg text-cream">Italian Tiramisu</p>
+                </div>
+                <div>
+                  <p className="font-serif text-lg text-cream">Cheesecake</p>
+                </div>
+                <div>
+                  <p className="font-serif text-lg text-cream">Fruit Sorbet</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="font-serif italic text-2xl text-gold mb-4">From £45 per person</p>
-            <p className="font-sans text-sm text-muted">Includes 3 courses, welcome drink and festive decorations</p>
+          <div className="mt-16 pt-8 border-t border-white/10">
+            <p className="font-sans text-xs text-muted text-center leading-relaxed">Our menu contains allergens. If you suffer from a food allergy or intolerance, please let a member of the restaurant team know upon placing your order, however we cannot fully guarantee that the food in these premises will be free from allergens.</p>
           </div>
         </div>
       </section>
