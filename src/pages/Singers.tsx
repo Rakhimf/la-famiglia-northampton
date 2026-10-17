@@ -1,19 +1,19 @@
 import { HeroSection } from '@/components/HeroSection';
 import { BookingCTA } from '@/components/BookingCTA';
 
-export default function Singers() {
-  const portraitVideos = [
-    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.43.08.mp4',
-    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.11.mp4',
-    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.38.mp4',
-    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/2nd%20video.mp4',
-    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.49.31.mp4',
-    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.50.57.mp4',
-    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.53.39.mp4',
-    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.56.05.mp4',
-    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.56.50.mp4',
-  ];
+const portraitVideos = [
+  'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.43.08.mp4',
+  'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.11.mp4',
+  'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.38.mp4',
+  'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/2nd%20video.mp4',
+  'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.49.31.mp4',
+  'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.50.57.mp4',
+  'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.53.39.mp4',
+  'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.56.05.mp4',
+  'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.56.50.mp4',
+];
 
+export default function Singers() {
   return (
     <div className="bg-bg text-cream">
       <HeroSection
@@ -36,62 +36,26 @@ export default function Singers() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto mb-16">
-          <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/10">
-            <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
-              <span className="font-serif text-3xl text-gold">♪</span>
-            </div>
-            <h3 className="font-serif text-2xl text-cream mb-2">Just Juseppe</h3>
-            <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
-            <p className="font-sans text-sm text-muted leading-[1.6]">Bringing the soul of Italy to every performance with incredible vocal talent and charisma.</p>
-          </div>
-          <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/10">
-            <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
-              <span className="font-serif text-3xl text-gold">♪</span>
-            </div>
-            <h3 className="font-serif text-2xl text-cream mb-2">Dorell</h3>
-            <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
-            <p className="font-sans text-sm text-muted leading-[1.6]">A captivating performer delivering unforgettable evenings of live music and entertainment.</p>
-          </div>
-          <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/10">
-            <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
-              <span className="font-serif text-3xl text-gold">♪</span>
-            </div>
-            <h3 className="font-serif text-2xl text-cream mb-2">Jess</h3>
-            <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
-            <p className="font-sans text-sm text-muted leading-[1.6]">Stunning vocal performances that light up the room every Friday and Saturday from 20:00.</p>
-          </div>
+        <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl mb-8">
+          <video
+            src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1713209036.mov"
+            controls
+            playsInline
+            style={{ width: '100%', maxHeight: '500px', objectFit: 'cover', display: 'block' }}
+          />
         </div>
-      </section>
 
-      {/* Videos section */}
-      <section className="px-6 lg:px-20 pb-20">
-        <div className="max-w-[1000px] mx-auto">
-          <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-10 text-center">See Them Live</p>
-
-          {/* Featured wide video */}
-          <div className="rounded-xl overflow-hidden shadow-2xl mb-6">
-            <video
-              src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1713209036.mov"
-              controls
-              playsInline
-              style={{ width: '100%', maxHeight: '500px', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
-            />
-          </div>
-
-          {/* Portrait videos — 3 per row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {portraitVideos.map((src, i) => (
-              <div key={i} className="rounded-xl overflow-hidden shadow-xl bg-[#141210]">
-                <video
-                  src={src}
-                  controls
-                  playsInline
-                  style={{ width: '100%', aspectRatio: '9/16', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
-                />
-              </div>
-            ))}
-          </div>
+        <div className="max-w-[900px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+          {portraitVideos.map((src, i) => (
+            <div key={i} className="rounded-xl overflow-hidden shadow-xl bg-black" style={{ aspectRatio: '9/16' }}>
+              <video
+                src={src}
+                controls
+                playsInline
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
+          ))}
         </div>
       </section>
 
