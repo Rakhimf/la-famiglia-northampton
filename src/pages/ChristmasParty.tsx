@@ -119,15 +119,24 @@ export default function ChristmasParty() {
         </div>
       </section>
 
-      <SplitSection
-        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png"
-        imageAlt="Private dining for Christmas"
-        eyebrow="Private Hire"
-        heading="Exclusive Christmas Events"
-        body="Book our stunning venue exclusively for your Christmas party. We cater for groups of all sizes, from intimate gatherings to large corporate events. Our team will work with you to create a bespoke Christmas experience."
-        cta={{ text: 'Enquire Now', href: '/contact' }}
-        imageLeft={true}
-      />
+      <section className="py-24 md:py-32 px-6 lg:px-20 bg-bg">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="rounded-xl overflow-hidden shadow-2xl">
+            <video
+              src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2008.42.55.mp4"
+              controls
+              playsInline
+              style={{ width: '100%', display: 'block' }}
+            />
+          </div>
+          <div>
+            <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-4">Private Hire</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-cream uppercase tracking-widest mb-6">Exclusive Christmas Events</h2>
+            <p className="font-sans text-base text-muted leading-[1.8] mb-8">Book our stunning venue exclusively for your Christmas party. We cater for groups of all sizes, from intimate gatherings to large corporate events. Our team will work with you to create a bespoke Christmas experience.</p>
+            <a href="/contact" className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-cream border border-cream/30 px-8 py-4 hover:bg-cream hover:text-bg transition-colors">Enquire Now</a>
+          </div>
+        </div>
+      </section>
 
       {/* Key Info */}
       <section className="py-24 md:py-32 px-6 lg:px-20 bg-bg">
