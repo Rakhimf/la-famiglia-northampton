@@ -28,7 +28,7 @@ export default function Singers() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto mb-16">
           <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/10">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
-              <span className="font-serif text-3xl text-gold">Music Note</span>
+              <span className="font-serif text-3xl text-gold">♪</span>
             </div>
             <h3 className="font-serif text-2xl text-cream mb-2">Just Juseppe</h3>
             <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
@@ -36,7 +36,7 @@ export default function Singers() {
           </div>
           <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/10">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
-              <span className="font-serif text-3xl text-gold">Music Note</span>
+              <span className="font-serif text-3xl text-gold">♪</span>
             </div>
             <h3 className="font-serif text-2xl text-cream mb-2">Dorell</h3>
             <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
@@ -44,7 +44,7 @@ export default function Singers() {
           </div>
           <div className="bg-[#141210] rounded-lg p-8 text-center border border-white/10">
             <div className="w-24 h-24 rounded-full bg-gold/20 mx-auto mb-4 flex items-center justify-center">
-              <span className="font-serif text-3xl text-gold">Music Note</span>
+              <span className="font-serif text-3xl text-gold">♪</span>
             </div>
             <h3 className="font-serif text-2xl text-cream mb-2">Jess</h3>
             <p className="font-sans text-sm text-gold mb-3">Live at La Famiglia</p>
@@ -52,23 +52,51 @@ export default function Singers() {
           </div>
         </div>
       </section>
-      <div className="px-6 lg:px-20 pb-12">
-        <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl">
-          <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.43.08.mp4" />
-        </div>
-      </div>
 
-      <div className="px-6 lg:px-20 pb-12">
-        <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl">
-          <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.11.mp4" />
-        </div>
-      </div>
+      {/* Videos section */}
+      <section className="px-6 lg:px-20 pb-20">
+        <div className="max-w-[1000px] mx-auto">
+          <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-10 text-center">See Them Live</p>
 
-      <div className="px-6 lg:px-20 pb-12">
-        <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl">
-          <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.38.mp4" />
+          {/* Featured video — wide */}
+          <div className="rounded-xl overflow-hidden shadow-2xl mb-6" style={{ maxHeight: '520px' }}>
+            <video
+              src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1713209036.mov"
+              controls
+              playsInline
+              style={{ width: '100%', maxHeight: '520px', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
+            />
+          </div>
+
+          {/* Three portrait videos side by side on desktop, stacked on mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <video
+                src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.43.08.mp4"
+                controls
+                playsInline
+                style={{ width: '100%', aspectRatio: '9/16', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <video
+                src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.11.mp4"
+                controls
+                playsInline
+                style={{ width: '100%', aspectRatio: '9/16', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <video
+                src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.38.mp4"
+                controls
+                playsInline
+                style={{ width: '100%', aspectRatio: '9/16', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       <BookingCTA />
     </div>
