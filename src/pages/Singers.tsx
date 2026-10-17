@@ -10,7 +10,6 @@ const portraitVideos = [
   'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.50.57.mp4',
   'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.53.39.mp4',
   'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.56.05.mp4',
-  'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.56.50.mp4',
 ];
 
 export default function Singers() {
