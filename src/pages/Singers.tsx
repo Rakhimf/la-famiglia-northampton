@@ -52,10 +52,21 @@ export default function Singers() {
           </div>
         </div>
       </section>
-
-      <div className="px-6 lg:px-20 py-12">
+      <div className="px-6 lg:px-20 pb-12">
         <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl">
-          <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1713209036.mov" />
+          <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.43.08.mp4" />
+        </div>
+      </div>
+
+      <div className="px-6 lg:px-20 pb-12">
+        <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl">
+          <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.11.mp4" />
+        </div>
+      </div>
+
+      <div className="px-6 lg:px-20 pb-12">
+        <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl">
+          <VideoPlayer src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.38.mp4" />
         </div>
       </div>
 
