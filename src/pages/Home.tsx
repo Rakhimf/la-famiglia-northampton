@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="bg-bg text-cream">
       <HeroSection
-        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Screenshot%202026-07-14%20at%2020.52.20.png"
+        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/Monochrome%20Gothic%20Guildhouse%20Street%20Scene.png"
         imageAlt="Interior of La Famiglia"
         headline="Where History Meets Italian Soul"
         subheading="Fine dining, live music and an evening you won't forget."
