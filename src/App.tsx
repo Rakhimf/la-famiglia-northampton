@@ -19,7 +19,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="menu" element={<Menu />} />
-          <Route path="events" element={<Events />} />
+          {/* Private Events hidden - <Route path="events" element={<Events />} /> */
           <Route path="christmas-party" element={<ChristmasParty />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact" element={<Contact />} />
