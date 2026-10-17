@@ -1,8 +1,17 @@
 import { HeroSection } from '@/components/HeroSection';
 import { BookingCTA } from '@/components/BookingCTA';
-import { VideoPlayer } from '@/components/VideoPlayer';
 
 export default function Singers() {
+  const portraitVideos = [
+    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.43.08.mp4',
+    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.11.mp4',
+    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.38.mp4',
+    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/2nd%20video.mp4',
+    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.49.31.mp4',
+    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.50.57.mp4',
+    'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.53.39.mp4',
+  ];
+
   return (
     <div className="bg-bg text-cream">
       <HeroSection
@@ -58,42 +67,28 @@ export default function Singers() {
         <div className="max-w-[1000px] mx-auto">
           <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-10 text-center">See Them Live</p>
 
-          {/* Featured video — wide */}
-          <div className="rounded-xl overflow-hidden shadow-2xl mb-6" style={{ maxHeight: '520px' }}>
+          {/* Featured wide video */}
+          <div className="rounded-xl overflow-hidden shadow-2xl mb-6">
             <video
               src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/RPReplay_Final1713209036.mov"
               controls
               playsInline
-              style={{ width: '100%', maxHeight: '520px', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
+              style={{ width: '100%', maxHeight: '500px', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
             />
           </div>
 
-          {/* Three portrait videos side by side on desktop, stacked on mobile */}
+          {/* Portrait videos — 3 per row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="rounded-xl overflow-hidden shadow-xl">
-              <video
-                src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.43.08.mp4"
-                controls
-                playsInline
-                style={{ width: '100%', aspectRatio: '9/16', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden shadow-xl">
-              <video
-                src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.11.mp4"
-                controls
-                playsInline
-                style={{ width: '100%', aspectRatio: '9/16', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden shadow-xl">
-              <video
-                src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.46.38.mp4"
-                controls
-                playsInline
-                style={{ width: '100%', aspectRatio: '9/16', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
-              />
-            </div>
+            {portraitVideos.map((src, i) => (
+              <div key={i} className="rounded-xl overflow-hidden shadow-xl bg-[#141210]">
+                <video
+                  src={src}
+                  controls
+                  playsInline
+                  style={{ width: '100%', aspectRatio: '9/16', objectFit: 'cover', display: 'block', backgroundColor: '#0D0C0A' }}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
