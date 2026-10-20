@@ -18,13 +18,14 @@ interface MenuCategoryData {
 }
 
 const R2 = 'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/';
+const HP = 'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/';
 
 const menuData: MenuCategoryData[] = [
   {
     id: 'starters',
     name: 'Starters',
     count: 9,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png`,
+    photo: 'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/acb8fdd7-e9fe-442a-ba34-8e94c96d1fe3.jpg',
     items: [
       { name: 'Garlic Bread with Mozzarella', badges: ['V'], description: '', price: '£12' },
       { name: 'Burrata Bruschetta', badges: ['V'], description: '', price: '£13' },
@@ -41,7 +42,7 @@ const menuData: MenuCategoryData[] = [
     id: 'mains',
     name: 'Main Courses',
     count: 13,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_57_42%20PM.png`,
+    photo: `${HP}IMG_8080.JPG`,
     items: [
       { name: 'Spaghetti alla Carbonara', badges: [], description: '', price: '£22' },
       { name: 'Spaghetti Bolognese', badges: [], description: '', price: '£24.50' },
@@ -62,7 +63,7 @@ const menuData: MenuCategoryData[] = [
     id: 'steaks',
     name: 'Premium Steaks',
     count: 6,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_57_42%20PM.png`,
+    photo: `${HP}IMG_8096.JPG`,
     note: 'Premium dry-aged cuts cooked in our Josper Charcoal Grill Oven. Add a Lobster Tail +£18.',
     items: [
       { name: 'Rib-eye Steak', badges: [], description: '', price: '£35' },
@@ -77,7 +78,7 @@ const menuData: MenuCategoryData[] = [
     id: 'sides',
     name: 'Sides & Sauces',
     count: 8,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png`,
+    photo: `${HP}Italian%20Restaurant%20La%20Famiglia%20Northampton%202.png`,
     note: 'All sides and sauces £6.50 each.',
     items: [
       { name: 'Mixed Grilled Vegetables', badges: ['V'], description: '', price: '£6.50' },
@@ -94,7 +95,7 @@ const menuData: MenuCategoryData[] = [
     id: 'sunday',
     name: 'Sunday Roast',
     count: 3,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_57_42%20PM.png`,
+    photo: `${HP}A4.png`,
     note: 'Available Sundays 12:00\u201317:00.',
     items: [
       { name: 'The All-In Roast Feast', badges: [], description: 'Unlimited trimmings. Minimum 2 guests.', price: '£32 pp' },
@@ -106,7 +107,7 @@ const menuData: MenuCategoryData[] = [
     id: 'kids',
     name: "Children's Menu",
     count: 4,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png`,
+    photo: `${HP}Italian%20Restaurant%20La%20Famiglia%20Northampton%20LaFamiglia.png`,
     note: 'Available for children up to 12 years of age.',
     items: [
       { name: 'Spaghetti al Pomodoro', badges: ['V'], description: '', price: '£9.50' },
@@ -119,7 +120,7 @@ const menuData: MenuCategoryData[] = [
     id: 'desserts',
     name: 'Desserts',
     count: 5,
-    photo: `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_50_31%20PM.png`,
+    photo: `${HP}IMG_4666.JPG`,
     items: [
       { name: 'Classic Tiramisu', badges: [], description: '', price: '£8.10' },
       { name: 'Affogato', badges: [], description: '', price: '£6.95' },
@@ -130,7 +131,7 @@ const menuData: MenuCategoryData[] = [
   },
 ];
 
-const FALLBACK = `${R2}ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png`;
+const FALLBACK = `${HP}acb8fdd7-e9fe-442a-ba34-8e94c96d1fe3.jpg`;
 
 function CategoryTile({ cat, onClick }: { cat: MenuCategoryData; onClick: () => void; key?: React.Key }) {
   const [imgError, setImgError] = useState(false);
