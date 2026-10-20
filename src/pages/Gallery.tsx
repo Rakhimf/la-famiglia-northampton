@@ -37,6 +37,7 @@ const galleryData = [
   { id: 29, category: "Desserts", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/dessert/IMG_4666.JPG", alt: "La Famiglia dessert" },
   { id: 30, category: "Desserts", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/dessert/IMG_6334.JPG", alt: "La Famiglia dessert" },
   { id: 31, category: "Desserts", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/dessert/IMG_6336.JPG", alt: "La Famiglia dessert" },
+  { id: 32, category: "Desserts", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/dessert/PE5A8046.MP4", alt: "La Famiglia dessert video", type: "video" },
   { id: 28, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/LaFamiglia%20Northampton%20Restaurant(1).png", alt: "La Famiglia bar" },
 ];
 
@@ -109,15 +110,26 @@ export default function Gallery() {
                 className="relative overflow-hidden cursor-pointer group break-inside-avoid"
                 onClick={() => setSelectedImage(image.id)}
               >
-                <img 
-                  src={image.src} 
-                  alt={image.alt} 
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
+                {(image as any).type === "video" ? (
+                  <video
+                    src={image.src}
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                  />
+                ) : (
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                )}
                 <div className="absolute inset-0 bg-bg/0 group-hover:bg-bg/40 transition-colors duration-500 flex items-center justify-center">
                   <span className="opacity-0 group-hover:opacity-100 font-sans text-xs uppercase tracking-[0.2em] text-cream transition-opacity duration-500 delay-100">
-                    View Image
+                    {(image as any).type === "video" ? "Play Video" : "View Image"}
                   </span>
                 </div>
               </motion.div>
@@ -156,11 +168,24 @@ export default function Gallery() {
               exit={{ opacity: 0, scale: 0.9 }}
               className="relative max-w-5xl w-full h-full flex items-center justify-center pointer-events-none"
             >
-              <img 
-                src={galleryData.find(i => i.id === selectedImage)?.src} 
-                alt="Enlarged view" 
-                className="max-w-full max-h-[85vh] object-contain pointer-events-auto"
-              />
+              {(() => {
+                const item = galleryData.find(i => i.id === selectedImage);
+                return (item as any)?.type === "video" ? (
+                  <video
+                    src={item?.src}
+                    controls
+                    autoPlay
+                    playsInline
+                    className="max-w-full max-h-[85vh] object-contain pointer-events-auto"
+                  />
+                ) : (
+                  <img
+                    src={item?.src}
+                    alt="Enlarged view"
+                    className="max-w-full max-h-[85vh] object-contain pointer-events-auto"
+                  />
+                );
+              })()}
             </motion.div>
 
             <button 
