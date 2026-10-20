@@ -34,6 +34,9 @@ const galleryData = [
   { id: 17, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8947.PNG", alt: "Signature drinks" },
   { id: 18, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_9635.JPG", alt: "La Famiglia bar" },
   { id: 27, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/LaFamiglia%20Restaurant%20Northampton%203.png", alt: "La Famiglia drinks" },
+  { id: 29, category: "Desserts", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/dessert/IMG_4666.JPG", alt: "La Famiglia dessert" },
+  { id: 30, category: "Desserts", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/dessert/IMG_6334.JPG", alt: "La Famiglia dessert" },
+  { id: 31, category: "Desserts", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/dessert/IMG_6336.JPG", alt: "La Famiglia dessert" },
   { id: 28, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/LaFamiglia%20Northampton%20Restaurant(1).png", alt: "La Famiglia bar" },
 ];
 
