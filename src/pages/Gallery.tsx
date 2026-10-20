@@ -16,6 +16,15 @@ const galleryData = [
   { id: 6, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png", alt: "Dining hall" },
   { id: 7, category: "Food", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_58_52%20PM.png", alt: "Steak dish" },
   { id: 8, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2009_00_19%20PM.png", alt: "Cocktail" },
+  { id: 9, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/A4.png", alt: "La Famiglia menu" },
+  { id: 10, category: "Events", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_8222.JPG", alt: "La Famiglia event" },
+  { id: 11, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_9888.JPG", alt: "La Famiglia restaurant" },
+  { id: 12, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%202.png", alt: "La Famiglia Northampton" },
+  { id: 13, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%203.png", alt: "La Famiglia Northampton interior" },
+  { id: 14, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%20LaFamiglia.png", alt: "La Famiglia branding" },
+  { id: 15, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20Northampton%20Story%203.png", alt: "La Famiglia story" },
+  { id: 16, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20Northampton%20Story.png", alt: "La Famiglia Northampton story" },
+  { id: 17, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/acb8fdd7-e9fe-442a-ba34-8e94c96d1fe3.jpg", alt: "La Famiglia dining" },
 ];
 
 export default function Gallery() {

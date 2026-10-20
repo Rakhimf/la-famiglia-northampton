@@ -33,22 +33,27 @@ export default function Home() {
         className="pb-8 md:pb-12"
       />
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 h-[50vh] md:h-[70vh] gap-1">
-        <img
-          src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png"
-          alt="Restaurant dishes"
-          className="w-full h-full object-cover"
-        />
-        <img
-          src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Screenshot%202026-08-19%20at%2013.27.26.png"
-          alt="Food presentation"
-          className="w-full h-full object-cover hidden md:block"
-        />
-        <img
-          src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_50_31%20PM.png"
-          alt="La Famiglia atmosphere"
-          className="w-full h-full object-cover hidden md:block"
-        />
+      {/* Photo grid — 3 cols x 3 rows */}
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-1">
+        {[
+          { src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%202.png", alt: "La Famiglia Northampton" },
+          { src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_8222.JPG", alt: "La Famiglia event" },
+          { src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%203.png", alt: "La Famiglia interior" },
+          { src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20Northampton%20Story.png", alt: "La Famiglia story" },
+          { src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/acb8fdd7-e9fe-442a-ba34-8e94c96d1fe3.jpg", alt: "La Famiglia dining" },
+          { src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20Northampton%20Story%203.png", alt: "La Famiglia story 3" },
+          { src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_9888.JPG", alt: "La Famiglia restaurant" },
+          { src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%20LaFamiglia.png", alt: "La Famiglia branding" },
+          { src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/A4.png", alt: "La Famiglia menu" },
+        ].map((img, i) => (
+          <img
+            key={i}
+            src={img.src}
+            alt={img.alt}
+            className="w-full h-[40vw] md:h-[33vw] object-cover"
+            loading="lazy"
+          />
+        ))}
       </div>
 
       <SplitSection
