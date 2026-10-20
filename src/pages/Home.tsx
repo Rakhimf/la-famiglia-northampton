@@ -70,7 +70,7 @@ export default function Home() {
 
       <div className="px-6 lg:px-20 py-12">
         <div className="max-w-[900px] mx-auto rounded-xl overflow-hidden shadow-2xl">
-          <video src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2008.22.16.mp4" controls playsInline style={{ width: "100%", display: "block" }} />
+          <video src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Web%20video.mp4" controls playsInline style={{ width: "100%", display: "block" }} />
         </div>
       </div>
 
