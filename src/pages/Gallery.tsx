@@ -8,29 +8,26 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 const categories = ["All", "Food", "The Restaurant", "Drink", "Events"];
 
 const galleryData = [
-  { id: 1, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_41_54%20PM.png", alt: "Interior seating" },
-  { id: 2, category: "Food", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_56_28%20PM.png", alt: "Pasta dish" },
-  { id: 3, category: "Food", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_57_42%20PM.png", alt: "Pizza preparation" },
-  { id: 4, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/2M8A9120.JPG", alt: "Drinks at La Famiglia" },
-  { id: 5, category: "Events", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_50_31%20PM.png", alt: "Live music event" },
-  { id: 6, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png", alt: "Dining hall" },
-  { id: 7, category: "Food", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_58_52%20PM.png", alt: "Steak dish" },
-  { id: 8, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/2M8A9293.JPG", alt: "Cocktails at La Famiglia" },
-  { id: 18, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/2M8A9335a.JPG", alt: "Drinks selection" },
-  { id: 19, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8273.JPG", alt: "Bar drinks" },
-  { id: 20, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8276.JPG", alt: "Drinks" },
-  { id: 21, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8277.JPG", alt: "Cocktail selection" },
-  { id: 22, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8947.PNG", alt: "Signature drinks" },
-  { id: 23, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_9635.JPG", alt: "La Famiglia bar" },
-  { id: 9, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/A4.png", alt: "La Famiglia menu" },
-  { id: 10, category: "Events", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_8222.JPG", alt: "La Famiglia event" },
-  { id: 11, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_9888.JPG", alt: "La Famiglia restaurant" },
-  { id: 12, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%202.png", alt: "La Famiglia Northampton" },
-  { id: 13, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%203.png", alt: "La Famiglia Northampton interior" },
-  { id: 14, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%20LaFamiglia.png", alt: "La Famiglia branding" },
-  { id: 15, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20Northampton%20Story%203.png", alt: "La Famiglia story" },
-  { id: 16, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20Northampton%20Story.png", alt: "La Famiglia Northampton story" },
-  { id: 17, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/acb8fdd7-e9fe-442a-ba34-8e94c96d1fe3.jpg", alt: "La Famiglia dining" },
+  // The Restaurant
+  { id: 1,  category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%202.png", alt: "La Famiglia Northampton" },
+  { id: 2,  category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%203.png", alt: "La Famiglia interior" },
+  { id: 3,  category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%20LaFamiglia.png", alt: "La Famiglia branding" },
+  { id: 4,  category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20Northampton%20Story.png", alt: "La Famiglia story" },
+  { id: 5,  category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20Northampton%20Story%203.png", alt: "La Famiglia story 3" },
+  { id: 6,  category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/acb8fdd7-e9fe-442a-ba34-8e94c96d1fe3.jpg", alt: "La Famiglia dining" },
+  { id: 7,  category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/A4.png", alt: "La Famiglia menu" },
+  // Events
+  { id: 8,  category: "Events", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_8222.JPG", alt: "La Famiglia event" },
+  { id: 9,  category: "Events", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_9888.JPG", alt: "La Famiglia restaurant" },
+  // Drink
+  { id: 10, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/2M8A9120.JPG", alt: "Drinks at La Famiglia" },
+  { id: 11, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/2M8A9293.JPG", alt: "Cocktails at La Famiglia" },
+  { id: 12, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/2M8A9335a.JPG", alt: "Drinks selection" },
+  { id: 13, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8273.JPG", alt: "Bar drinks" },
+  { id: 14, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8276.JPG", alt: "Drinks" },
+  { id: 15, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8277.JPG", alt: "Cocktail selection" },
+  { id: 16, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8947.PNG", alt: "Signature drinks" },
+  { id: 17, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_9635.JPG", alt: "La Famiglia bar" },
 ];
 
 export default function Gallery() {
