@@ -17,7 +17,7 @@ export default function Singers() {
   return (
     <div className="bg-bg text-cream">
       <HeroSection
-        videoSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2007.43.08.mp4"
+        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/Monochrome%20Gothic%20Guildhouse%20Street%20Scene.png"
         imageAlt="Live music at La Famiglia"
         eyebrow="Live Entertainment"
         headline="Our Singers"
