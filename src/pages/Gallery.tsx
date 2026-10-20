@@ -21,8 +21,6 @@ const galleryData = [
   { id: 9,  category: "Events", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_9888.JPG", alt: "La Famiglia restaurant" },
   // Drink
   { id: 10, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/2M8A9120.JPG", alt: "Drinks at La Famiglia" },
-  { id: 11, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/2M8A9293.JPG", alt: "Cocktails at La Famiglia" },
-  { id: 12, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/2M8A9335a.JPG", alt: "Drinks selection" },
   { id: 13, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8273.JPG", alt: "Bar drinks" },
   { id: 14, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8276.JPG", alt: "Drinks" },
   { id: 15, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8277.JPG", alt: "Cocktail selection" },
