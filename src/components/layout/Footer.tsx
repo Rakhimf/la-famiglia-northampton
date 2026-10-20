@@ -83,6 +83,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-gold/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted uppercase tracking-widest font-light">
           <p>&copy; {currentYear} La Famiglia. All rights reserved.</p>
+          <p>Made by <a href="https://rakdevelopments.uk/" target="_blank" rel="noopener noreferrer" className="hover:text-cream transition-colors">Rak Developments</a></p>
           <div className="flex gap-4">
             <Link to="/terms" className="hover:text-cream transition-colors">Terms & Conditions</Link>
             <Link to="/privacy" className="hover:text-cream transition-colors">Cookie Policy</Link>
