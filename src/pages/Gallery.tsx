@@ -22,8 +22,6 @@ const galleryData = [
   { id: 12, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_9187.JPG", alt: "Signature cocktail" },
   { id: 13, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_9188.JPG", alt: "Cocktail bar" },
   { id: 14, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/Italian%20Restaurant%20Northampton%20Story%203.png", alt: "La Famiglia drinks" },
-  { id: 15, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8273.JPG", alt: "Bar drinks" },
-  { id: 16, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8276.JPG", alt: "Drinks" },
   { id: 17, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8277.JPG", alt: "Cocktail selection" },
   { id: 18, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_8947.PNG", alt: "Signature drinks" },
   { id: 19, category: "Drink", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Drinks/IMG_9635.JPG", alt: "La Famiglia bar" },
