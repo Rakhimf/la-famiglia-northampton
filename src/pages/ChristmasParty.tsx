@@ -4,11 +4,22 @@ import { SplitSection } from '@/components/SplitSection';
 import { BookingCTA } from '@/components/BookingCTA';
 import { motion } from 'motion/react';
 
+const R2 = 'https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/christmas/';
+
+const christmasPhotos = [
+  { src: `${R2}2M8A9074.JPG`, alt: "Christmas at La Famiglia" },
+  { src: `${R2}54eb56a8-3cd4-4c40-b1b0-9cf427011771.jpg`, alt: "Festive dining at La Famiglia" },
+  { src: `${R2}A1%20(3).png`, alt: "Christmas party La Famiglia" },
+  { src: `${R2}A2%20(1).png`, alt: "Christmas celebrations" },
+  { src: `${R2}A3.png`, alt: "Festive atmosphere" },
+  { src: `${R2}A5.png`, alt: "Christmas party Northampton" },
+];
+
 export default function ChristmasParty() {
   return (
     <div className="bg-bg text-cream">
       <HeroSection
-        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_50_31%20PM.png"
+        imageSrc={`${R2}2M8A9074.JPG`}
         imageAlt="Christmas at La Famiglia"
         eyebrow="Festive Season"
         headline="Christmas Party at La Famiglia"
@@ -28,6 +39,58 @@ export default function ChristmasParty() {
         }
       />
 
+      {/* Christmas Video */}
+      <section className="py-16 md:py-24 px-6 lg:px-20 bg-bg">
+        <div className="max-w-[900px] mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <video
+              src={`${R2}Christmas%20Party%20Northampton%20LaFamiglia%20Restaurant%20Book%20a%20Party.mp4`}
+              controls
+              playsInline
+              className="w-full rounded-[2px] aspect-video object-cover"
+              poster={`${R2}2M8A9074.JPG`}
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Christmas Photo Gallery */}
+      <section className="py-16 md:py-24 px-6 lg:px-20 bg-bg">
+        <div className="max-w-[1200px] mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold mb-4">The Atmosphere</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-cream uppercase tracking-widest">Christmas at La Famiglia</h2>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {christmasPhotos.map((photo, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="aspect-square overflow-hidden"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Christmas Menu Preview */}
       <section className="py-24 md:py-32 px-6 lg:px-20 bg-bg">
         <div className="max-w-[1000px] mx-auto">
@@ -39,104 +102,64 @@ export default function ChristmasParty() {
           >
             <p className="font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold mb-6">Festive Menu</p>
             <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] text-cream uppercase tracking-widest">Christmas Party Menu</h2>
-            <div className="mt-6">
-              <p className="font-serif italic text-xl text-gold mb-1">£60 per person — Friday &amp; Saturday</p>
-              <p className="font-serif italic text-lg text-gold/80">£50 per person — Other Days</p>
-            </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            {/* Appetizers */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            {/* Starters */}
             <div>
-              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Appetizers</h3>
+              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Starters</h3>
               <div className="space-y-6">
                 <div>
-                  <p className="font-serif text-lg text-cream">Italian Antipasti</p>
-                  <p className="font-sans text-sm text-muted">A selection of Italian cured meats and cheeses, served with olives, nuts, fruits, pickles and bread.</p>
+                  <p className="font-serif text-lg text-cream">Bruschetta Trio</p>
+                  <p className="font-sans text-sm text-muted">Classic tomato & basil, chicken liver pate, prosciutto & stracchino</p>
                 </div>
                 <div>
-                  <p className="font-serif text-lg text-cream">Arancini al Ragù</p>
-                  <p className="font-sans text-sm text-muted">Crispy Sicilian risotto balls filled with rich beef ragù, served with marinara sauce and finished with a sprinkle of Parmesan.</p>
+                  <p className="font-serif text-lg text-cream">Burrata with Roasted Vegetables</p>
+                  <p className="font-sans text-sm text-muted">Creamy burrata served with seasonal roasted vegetables</p>
                 </div>
                 <div>
-                  <p className="font-serif text-lg text-cream">Tiger Prawns</p>
-                  <p className="font-sans text-sm text-muted">Tiger prawns sautéed in garlic and chilli butter, finished with fresh herbs and served with toasted sourdough.</p>
-                </div>
-                <div>
-                  <p className="font-serif text-lg text-cream">Festive Camembert <span className="text-xs">(V)</span></p>
-                  <p className="font-sans text-sm text-muted">Whole Camembert baked until warm and creamy with pistachios, dried fruit and caramelised onions.</p>
+                  <p className="font-serif text-lg text-cream">King Prawns</p>
+                  <p className="font-sans text-sm text-muted">Sauteed in garlic and chilli butter</p>
                 </div>
               </div>
             </div>
 
             {/* Mains */}
             <div>
-              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Main Dishes</h3>
+              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Mains</h3>
               <div className="space-y-6">
                 <div>
-                  <p className="font-serif text-lg text-cream">Festive Turkey</p>
-                  <p className="font-sans text-sm text-muted">Roast turkey served with sweet potato mash, seasonal vegetables and cranberry sauce.</p>
+                  <p className="font-serif text-lg text-cream">Roast Turkey</p>
+                  <p className="font-sans text-sm text-muted">Traditional roast turkey with all the trimmings</p>
                 </div>
                 <div>
-                  <p className="font-serif text-lg text-cream">Chicken Supreme</p>
-                  <p className="font-sans text-sm text-muted">Grilled chicken supreme served with creamy mushroom orzo.</p>
+                  <p className="font-serif text-lg text-cream">Fillet Mignon</p>
+                  <p className="font-sans text-sm text-muted">Tender fillet steak with garlic mash and seasonal vegetables</p>
                 </div>
                 <div>
-                  <p className="font-serif text-lg text-cream">Stuffed Salmon</p>
-                  <p className="font-sans text-sm text-muted">Oven-baked salmon fillet filled with creamy spinach, served with buttery mashed potatoes, tender asparagus and cranberry sauce.</p>
-                </div>
-                <div>
-                  <p className="font-serif text-lg text-cream">Rib-eye Steak</p>
-                  <p className="font-sans text-sm text-muted">12oz, 35-day dry-aged rib-eye steak with roasted bone marrow, seasonal roasted vegetables and classic peppercorn sauce.</p>
-                </div>
-                <div>
-                  <p className="font-serif text-lg text-cream">Truffle & Ricotta Ravioloni <span className="text-xs">(V)</span></p>
-                  <p className="font-sans text-sm text-muted">Homemade ravioloni filled with truffle-infused ricotta, served in a truffle cream sauce.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Desserts */}
-            <div>
-              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Desserts</h3>
-              <div className="space-y-6">
-                <div>
-                  <p className="font-serif text-lg text-cream">Italian Tiramisu</p>
-                </div>
-                <div>
-                  <p className="font-serif text-lg text-cream">Cheesecake</p>
-                </div>
-                <div>
-                  <p className="font-serif text-lg text-cream">Fruit Sorbet</p>
+                  <p className="font-serif text-lg text-cream">Truffle Ravioloni</p>
+                  <p className="font-sans text-sm text-muted">Homemade ravioloni with truffle cream sauce</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="pt-8 border-t border-white/10">
-            <p className="font-sans text-xs text-muted text-center leading-relaxed">Our menu contains allergens. If you suffer from a food allergy or intolerance, please let a member of the restaurant team know upon placing your order, however we cannot fully guarantee that the food in these premises will be free from allergens.</p>
+          <div className="mt-16 text-center">
+            <p className="font-serif italic text-2xl text-gold mb-4">From £45 per person</p>
+            <p className="font-sans text-sm text-muted">Includes 3 courses, welcome drink and festive decorations</p>
           </div>
         </div>
       </section>
 
-      <section className="py-24 md:py-32 px-6 lg:px-20 bg-bg">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="rounded-xl overflow-hidden shadow-2xl">
-            <video
-              src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Our%20singers/WhatsApp%20Video%202026-10-17%20at%2008.42.55.mp4"
-              controls
-              playsInline
-              style={{ width: '100%', display: 'block' }}
-            />
-          </div>
-          <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-4">Private Hire</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-cream uppercase tracking-widest mb-6">Exclusive Christmas Events</h2>
-            <p className="font-sans text-base text-muted leading-[1.8] mb-8">Book our stunning venue exclusively for your Christmas party. We cater for groups of all sizes, from intimate gatherings to large corporate events. Our team will work with you to create a bespoke Christmas experience.</p>
-            <a href="/contact" className="inline-block font-sans text-xs uppercase tracking-[0.2em] text-cream border border-cream/30 px-8 py-4 hover:bg-cream hover:text-bg transition-colors">Enquire Now</a>
-          </div>
-        </div>
-      </section>
+      <SplitSection
+        imageSrc={`${R2}A2%20(1).png`}
+        imageAlt="Private dining for Christmas"
+        eyebrow="Private Hire"
+        heading="Exclusive Christmas Events"
+        body="Book our stunning venue exclusively for your Christmas party. We cater for groups of all sizes, from intimate gatherings to large corporate events. Our team will work with you to create a bespoke Christmas experience."
+        cta={{ text: 'Enquire Now', href: '/contact' }}
+        imageLeft={true}
+      />
 
       {/* Key Info */}
       <section className="py-24 md:py-32 px-6 lg:px-20 bg-bg">
