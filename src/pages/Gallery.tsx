@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '@/lib/utils';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const categories = ["All", "Food", "The Restaurant", "Drink", "Events"];
+const categories = ["All", "Food", "The Restaurant", "Drink", "Desserts", "Events"];
 
 const galleryData = [
   { id: 1, category: "The Restaurant", src: "https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%202.png", alt: "La Famiglia Northampton" },
