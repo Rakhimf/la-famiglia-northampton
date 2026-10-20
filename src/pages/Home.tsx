@@ -57,7 +57,7 @@ export default function Home() {
       </div>
 
       <SplitSection
-        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2009_00_19%20PM.png"
+        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_8222.JPG"
         imageAlt="Private Dining at La Famiglia"
         eyebrow="Private Dining & Events"
         heading="An Unforgettable Setting for Every Occasion"
