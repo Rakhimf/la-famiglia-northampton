@@ -104,7 +104,7 @@ export default function ChristmasParty() {
             <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] text-cream uppercase tracking-widest">Our Christmas Menus</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {/* Christmas Day Menu */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -137,6 +137,25 @@ export default function ChristmasParty() {
                   src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Christmas%20party%20menu%20photos/ea6535b2-5a5c-4123-ad0e-55fc82d16eb9.jpeg"
                   alt="New Year's Eve Menu"
                   className="w-full object-contain hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </motion.div>
+
+            {/* Christmas Party Menu */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-col"
+            >
+              <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-4 text-center">Christmas Party</p>
+              <div className="overflow-hidden rounded-[2px] shadow-2xl">
+                <iframe
+                  src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Christmas%20party%20menu%20photos/LaFamiglia%20Christmas%20Menu%202026%202%20(1).pdf"
+                  className="w-full"
+                  style={{ height: '700px', border: 'none' }}
+                  title="Christmas Party Menu"
                 />
               </div>
             </motion.div>
