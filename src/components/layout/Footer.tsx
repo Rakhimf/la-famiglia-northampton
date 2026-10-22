@@ -31,7 +31,7 @@ export function Footer() {
                 { name: 'Home', path: '/' },
                 { name: 'About Us', path: '/about' },
                 { name: 'Menu', path: '/menu' },
-                { name: 'Events', path: '/events' },
+                { name: 'Christmas Party', path: '/christmas-party' },
                 { name: 'Gallery', path: '/gallery' },
                 { name: 'Contact Us', path: '/contact' },
                 { name: 'Book Now', path: '/book-now' },
