@@ -36,6 +36,7 @@ export function Footer() {
                 { name: "New Year's Eve", path: '/christmas-party' },
                 { name: 'Gallery', path: '/gallery' },
                 { name: 'Contact Us', path: '/contact' },
+                { name: 'Our Singers', path: '/singers' },
                 { name: 'Book Now', path: '/book-now' },
               ].map((link) => (
                 <li key={link.name}>
