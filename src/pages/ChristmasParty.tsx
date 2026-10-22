@@ -91,62 +91,55 @@ export default function ChristmasParty() {
         </div>
       </section>
 
-      {/* Christmas Menu Preview */}
+      {/* Christmas Menu Photos */}
       <section className="py-24 md:py-32 px-6 lg:px-20 bg-bg">
-        <div className="max-w-[1000px] mx-auto">
+        <div className="max-w-[1100px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold mb-6">Festive Menu</p>
-            <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] text-cream uppercase tracking-widest">Christmas Party Menu</h2>
+            <p className="font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold mb-6">Festive Menus</p>
+            <h2 className="font-serif text-4xl md:text-5xl leading-[1.05] text-cream uppercase tracking-widest">Our Christmas Menus</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {/* Starters */}
-            <div>
-              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Starters</h3>
-              <div className="space-y-6">
-                <div>
-                  <p className="font-serif text-lg text-cream">Bruschetta Trio</p>
-                  <p className="font-sans text-sm text-muted">Classic tomato & basil, chicken liver pate, prosciutto & stracchino</p>
-                </div>
-                <div>
-                  <p className="font-serif text-lg text-cream">Burrata with Roasted Vegetables</p>
-                  <p className="font-sans text-sm text-muted">Creamy burrata served with seasonal roasted vegetables</p>
-                </div>
-                <div>
-                  <p className="font-serif text-lg text-cream">King Prawns</p>
-                  <p className="font-sans text-sm text-muted">Sauteed in garlic and chilli butter</p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Christmas Day Menu */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="flex flex-col"
+            >
+              <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-4 text-center">Christmas Day</p>
+              <div className="overflow-hidden rounded-[2px] shadow-2xl">
+                <img
+                  src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Christmas%20party%20menu%20photos/6c7420fc-9e95-4b25-9ee2-3c32bd47713b.jpeg"
+                  alt="Christmas Day Menu"
+                  className="w-full object-contain hover:scale-105 transition-transform duration-700"
+                />
               </div>
-            </div>
+            </motion.div>
 
-            {/* Mains */}
-            <div>
-              <h3 className="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Mains</h3>
-              <div className="space-y-6">
-                <div>
-                  <p className="font-serif text-lg text-cream">Roast Turkey</p>
-                  <p className="font-sans text-sm text-muted">Traditional roast turkey with all the trimmings</p>
-                </div>
-                <div>
-                  <p className="font-serif text-lg text-cream">Fillet Mignon</p>
-                  <p className="font-sans text-sm text-muted">Tender fillet steak with garlic mash and seasonal vegetables</p>
-                </div>
-                <div>
-                  <p className="font-serif text-lg text-cream">Truffle Ravioloni</p>
-                  <p className="font-sans text-sm text-muted">Homemade ravioloni with truffle cream sauce</p>
-                </div>
+            {/* New Year's Eve Menu */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="flex flex-col"
+            >
+              <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-4 text-center">New Year's Eve</p>
+              <div className="overflow-hidden rounded-[2px] shadow-2xl">
+                <img
+                  src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Christmas%20party%20menu%20photos/ea6535b2-5a5c-4123-ad0e-55fc82d16eb9.jpeg"
+                  alt="New Year's Eve Menu"
+                  className="w-full object-contain hover:scale-105 transition-transform duration-700"
+                />
               </div>
-            </div>
-          </div>
-
-          <div className="mt-16 text-center">
-            <p className="font-serif italic text-2xl text-gold mb-4">From £45 per person</p>
-            <p className="font-sans text-sm text-muted">Includes 3 courses, welcome drink and festive decorations</p>
+            </motion.div>
           </div>
         </div>
       </section>
