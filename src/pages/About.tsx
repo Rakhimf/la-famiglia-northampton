@@ -9,7 +9,7 @@ export default function About() {
   return (
     <div className="bg-bg text-cream">
       <HeroSection
-        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_45_42%20PM.png"
+        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/Italian%20Restaurant%20La%20Famiglia%20Northampton%202.png"
         imageAlt="Interior of La Famiglia"
         eyebrow="Our Story"
         headline="Born from History. Built on Passion."
@@ -33,13 +33,13 @@ export default function About() {
       />
 
       <FullBleedImage
-        src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png"
+        src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_9888.JPG"
         alt="Interior architecture"
         heightClass="h-[60vh]"
       />
 
       <SplitSection
-        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_58_52%20PM.png"
+        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/acb8fdd7-e9fe-442a-ba34-8e94c96d1fe3.jpg"
         imageAlt="Fresh ingredients in the kitchen"
         eyebrow="Our Kitchen"
         heading="Crafted with Care"
@@ -64,7 +64,7 @@ export default function About() {
       </section>
 
       <SplitSection
-        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2009_00_19%20PM.png"
+        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/christmas/54eb56a8-3cd4-4c40-b1b0-9cf427011771.jpg"
         imageAlt="Restaurant Atmosphere"
         heading="Our Commitment"
         body={
@@ -108,7 +108,7 @@ export default function About() {
       </section>
 
       <FullBleedImage
-        src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_50_31%20PM.png"
+        src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/christmas/2M8A9074.JPG"
         alt="Live music and atmosphere"
         heightClass="h-[65vh]"
       />
