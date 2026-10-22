@@ -150,21 +150,13 @@ export default function ChristmasParty() {
               className="flex flex-col"
             >
               <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-gold mb-4 text-center">Christmas Party</p>
-              <a
-                href="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Christmas%20party%20menu%20photos/LaFamiglia%20Christmas%20Menu%202026%202%20(1).pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center gap-6 rounded-[2px] shadow-2xl border border-gold/30 hover:border-gold/70 transition-colors duration-300 bg-bg"
-                style={{ minHeight: '340px' }}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-16 h-16 text-gold/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                <div className="text-center px-6">
-                  <p className="font-serif text-xl text-cream mb-2">Christmas Party Menu</p>
-                  <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold">View Full Menu →</p>
-                </div>
-              </a>
+              <div className="overflow-hidden rounded-[2px] shadow-2xl">
+                <img
+                  src="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Christmas%20party%20menu.png"
+                  alt="Christmas Party Menu"
+                  className="w-full object-contain hover:scale-105 transition-transform duration-700"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
