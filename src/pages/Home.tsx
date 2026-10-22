@@ -24,13 +24,13 @@ export default function Home() {
       {/* Festive Event Buttons */}
       <div className="flex flex-col sm:flex-row gap-3 justify-center px-6 py-6 bg-bg border-b border-gold/20">
         <Link
-          to="/christmas-day"
+          to="/christmas-party"
           className="bg-[#CE2B37] hover:bg-[#b02530] text-white px-8 py-4 text-[11px] uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] font-semibold text-center"
         >
           🎄 Christmas Day
         </Link>
         <Link
-          to="/new-years-eve"
+          to="/christmas-party"
           className="bg-gold hover:bg-gold/80 text-bg px-8 py-4 text-[11px] uppercase tracking-[0.15em] transition-colors duration-300 rounded-[2px] font-semibold text-center"
         >
           🥂 New Year's Eve
