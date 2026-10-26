@@ -1,8 +1,17 @@
+import { useEffect } from 'react';
 import { HeroSection } from '@/components/HeroSection';
 import { BookingCTA } from '@/components/BookingCTA';
 import { motion } from 'motion/react';
 
 export default function BookNow() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://app.tableo.com/embed.js';
+    script.setAttribute('data-restaurant', 'la-famiglia-northampton-united-kingdom');
+    script.async = true;
+    document.getElementById('tableo-widget')?.appendChild(script);
+    return () => { script.remove(); };
+  }, []);
   return (
     <div className="bg-bg text-cream min-h-screen">
       <HeroSection 
@@ -23,13 +32,7 @@ export default function BookNow() {
         </motion.div>
 
         {/* Tableo Booking Widget */}
-        <div id="tableo-widget" className="w-full">
-          <script
-            src="https://app.tableo.com/embed.js"
-            data-restaurant="la-famiglia-northampton-united-kingdom"
-            async
-          />
-        </div>
+        <div id="tableo-widget" className="w-full min-h-[400px]" />
       </section>
 
       <BookingCTA />

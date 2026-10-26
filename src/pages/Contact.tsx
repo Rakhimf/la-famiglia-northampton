@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HeroSection } from '@/components/HeroSection';
 
 export default function Contact() {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://app.tableo.com/embed.js';
+    script.setAttribute('data-restaurant', 'la-famiglia-northampton-united-kingdom');
+    script.async = true;
+    document.getElementById('tableo-contact-widget')?.appendChild(script);
+    return () => { script.remove(); };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -155,7 +164,7 @@ export default function Contact() {
         <div className="max-w-[1000px] mx-auto text-center">
           <p className="font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold mb-6">Reservations</p>
           <h2 className="font-serif text-[36px] md:text-[48px] leading-[1.05] text-cream mb-12 uppercase tracking-widest">Book a Table</h2>
-          <div id="tableo-widget" className="w-full">
+          <div id="tableo-contact-widget" className="w-full min-h-[400px]">
             <script
               src="https://app.tableo.com/embed.js"
               data-restaurant="la-famiglia-northampton-united-kingdom"
