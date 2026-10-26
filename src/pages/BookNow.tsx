@@ -22,12 +22,13 @@ export default function BookNow() {
           </p>
         </motion.div>
 
-        {/* Booking Widget Placeholder */}
-        <div className="bg-bg-alt border border-gold/20 p-8 min-h-[500px] flex items-center justify-center">
-          <p className="font-serif italic text-xl text-gold">
-            {`{{BOOKING_WIDGET_EMBED_CODE}}`}
-            <br /><span className="font-sans text-sm text-muted not-italic block mt-4">(Extract from current live site before decommission)</span>
-          </p>
+        {/* Tableo Booking Widget */}
+        <div id="tableo-widget" className="w-full">
+          <script
+            src="https://app.tableo.com/embed.js"
+            data-restaurant="la-famiglia-northampton-united-kingdom"
+            async
+          />
         </div>
       </section>
 
