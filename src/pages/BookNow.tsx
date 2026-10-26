@@ -15,7 +15,7 @@ export default function BookNow() {
   return (
     <div className="bg-bg text-cream min-h-screen">
       <HeroSection 
-        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Photos%20on%20website/ChatGPT%20Image%20Jul%205%2C%202026%2C%2008_51_55%20PM.png"
+        imageSrc="https://pub-b509435e3be84148b1a1fbe99675973b.r2.dev/La-Famiglia/Home%20page/IMG_8080.JPG"
         imageAlt="Reservations at La Famiglia"
         eyebrow="Reservations"
         headline="Reserve Your Table"
