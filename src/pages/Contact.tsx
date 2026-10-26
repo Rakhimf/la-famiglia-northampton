@@ -150,6 +150,21 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Tableo Booking Widget */}
+      <section className="py-24 md:py-40 px-6 lg:px-20 bg-bg">
+        <div className="max-w-[1000px] mx-auto text-center">
+          <p className="font-sans text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold mb-6">Reservations</p>
+          <h2 className="font-serif text-[36px] md:text-[48px] leading-[1.05] text-cream mb-12 uppercase tracking-widest">Book a Table</h2>
+          <div id="tableo-widget" className="w-full">
+            <script
+              src="https://app.tableo.com/embed.js"
+              data-restaurant="la-famiglia-northampton-united-kingdom"
+              async
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Google Maps */}
       <section className="h-[500px] w-full">
         <iframe
