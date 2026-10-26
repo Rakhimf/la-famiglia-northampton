@@ -6,17 +6,50 @@ const testimonials = [
   {
     id: 1,
     text: "From the moment we stepped into La Famiglia, we felt transported to another world. The restaurant itself has a truly unique ambiance, almost like dining in a castle. The waitress was incredibly attentive and made us feel very welcome. The food was delicious, and we thoroughly enjoyed our meal. To top off the evening, we were treated to live entertainment.",
-    author: "Dalia Ancute"
+    author: "Dalia Ancute",
+    rating: 5
   },
   {
     id: 2,
     text: "Visited La Famiglia for the first time last night. We were blown away with the stunning and unique interior of the restaurant. The food was delicious and well presented and good portion sizes too. Staff were welcoming and nothing is too much trouble, will definitely visit again. Great place for a special occasion for something a little different, just what we need in Northampton.",
-    author: "Sonia Lees"
+    author: "Sonia Lees",
+    rating: 5
   },
   {
     id: 3,
-    text: "I spent a wonderful evening at this place. The food, organization and service was top notch! Bravo! I recommend with confidence!",
-    author: "Cristina Pasat"
+    text: "I spent a wonderful evening at this place. The food, organisation and service was top notch! Bravo! I recommend with confidence!",
+    author: "Cristina Pasat",
+    rating: 5
+  },
+  {
+    id: 4,
+    text: "Lovely atmosphere, great service, tasty food. We had a fantastic evening here — the venue is stunning and unlike anywhere else in Northampton. Will absolutely be back.",
+    author: "Google Reviewer",
+    rating: 5
+  },
+  {
+    id: 5,
+    text: "Staff and management gave me a great experience. From the welcome at the door to the final course, everything was handled with real care and professionalism. The food was excellent.",
+    author: "Google Reviewer",
+    rating: 5
+  },
+  {
+    id: 6,
+    text: "The portion sizes were generous and the ingredients tasted high quality. A truly authentic Italian experience in a breathtaking historic building. Highly recommend for a special night out.",
+    author: "Google Reviewer",
+    rating: 5
+  },
+  {
+    id: 7,
+    text: "This is a restaurant full of character with a terrific vibe. The waiting staff are excellent, keen to please. The food is superb — our party of 4 had a variety of dishes and every single one was outstanding.",
+    author: "TripAdvisor Reviewer",
+    rating: 5
+  },
+  {
+    id: 8,
+    text: "Celebrated our anniversary here and it was perfect. The live music added something truly special to the evening. The pasta was some of the best I've had outside of Italy. Cannot recommend highly enough.",
+    author: "Google Reviewer",
+    rating: 5
   }
 ];
 
@@ -54,6 +87,11 @@ export function TestimonialSlider() {
               <p className="font-serif italic text-[32px] md:text-[40px] leading-[1.3] text-cream mb-12 max-w-[1000px]">
                 {testimonials[currentIndex].text}
               </p>
+              <div className="flex justify-center gap-1 mb-4">
+                {Array.from({ length: testimonials[currentIndex].rating }).map((_, i) => (
+                  <span key={i} className="text-gold text-lg">★</span>
+                ))}
+              </div>
               <p className="font-sans text-base uppercase tracking-[0.15em] text-muted">
                 {testimonials[currentIndex].author}
               </p>
@@ -75,7 +113,7 @@ export function TestimonialSlider() {
         </div>
 
         <a 
-          href="https://google.com" 
+          href="https://www.google.com/maps/search/La+Famiglia+Northampton+reviews" 
           target="_blank" 
           rel="noopener noreferrer"
           className="inline-block border-b border-gold/50 text-gold hover:text-cream hover:border-cream pb-1 text-xs uppercase tracking-[0.15em] transition-colors duration-300"
